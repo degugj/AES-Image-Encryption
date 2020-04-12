@@ -1,0 +1,2628 @@
+
+C:/Users/weishanli/Desktop/WeishanLi/Lab2AES/Project/c_code/capture_image.axf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <__cs3_interrupt_vector>:
+       0:	18 f0 9f e5 18 f0 9f e5 18 f0 9f e5 18 f0 9f e5     ................
+      10:	18 f0 9f e5 18 f0 9f e5 18 f0 9f e5 18 f0 9f e5     ................
+      20:	40 00 00 00 80 13 00 00 84 13 00 00 88 13 00 00     @...............
+      30:	8c 13 00 00 7c 13 00 00 90 13 00 00 94 13 00 00     ....|...........
+
+00000040 <__cs3_reset>:
+      40:	ea000026 	b	e0 <__cs3_start_asm_sim>
+
+00000044 <__cs3_start_c>:
+      44:	e59f608c 	ldr	r6, [pc, #140]	; d8 <__cs3_start_c+0x94>
+      48:	e3560000 	cmp	r6, #0
+      4c:	e92d4080 	push	{r7, lr}
+      50:	e2466001 	sub	r6, r6, #1
+      54:	0a00001e 	beq	d4 <__cs3_start_c+0x90>
+      58:	e59f507c 	ldr	r5, [pc, #124]	; dc <__cs3_start_c+0x98>
+      5c:	e3a00000 	mov	r0, #0
+      60:	e3a01000 	mov	r1, #0
+      64:	e515200c 	ldr	r2, [r5, #-12]
+      68:	e515e010 	ldr	lr, [r5, #-16]
+      6c:	e5154008 	ldr	r4, [r5, #-8]
+      70:	e15e0002 	cmp	lr, r2
+      74:	00822004 	addeq	r2, r2, r4
+      78:	0a000009 	beq	a4 <__cs3_start_c+0x60>
+      7c:	e3540000 	cmp	r4, #0
+      80:	0a000007 	beq	a4 <__cs3_start_c+0x60>
+      84:	e1a07002 	mov	r7, r2
+      88:	e1a0c002 	mov	r12, r2
+      8c:	e8be000c 	ldm	lr!, {r2, r3}
+      90:	e8ac000c 	stmia	r12!, {r2, r3}
+      94:	e067300c 	rsb	r3, r7, r12
+      98:	e1540003 	cmp	r4, r3
+      9c:	e1a0200c 	mov	r2, r12
+      a0:	1afffff9 	bne	8c <__cs3_start_c+0x48>
+      a4:	e515e004 	ldr	lr, [r5, #-4]
+      a8:	e35e0000 	cmp	lr, #0
+      ac:	11a03002 	movne	r3, r2
+      b0:	0a000003 	beq	c4 <__cs3_start_c+0x80>
+      b4:	e8a30003 	stmia	r3!, {r0, r1}
+      b8:	e062c003 	rsb	r12, r2, r3
+      bc:	e15e000c 	cmp	lr, r12
+      c0:	1afffffb 	bne	b4 <__cs3_start_c+0x70>
+      c4:	e2466001 	sub	r6, r6, #1
+      c8:	e3760001 	cmn	r6, #1
+      cc:	e2855014 	add	r5, r5, #20
+      d0:	1affffe3 	bne	64 <__cs3_start_c+0x20>
+      d4:	eb00048f 	bl	1318 <__cs3_premain>
+      d8:	00000001 	.word	0x00000001
+      dc:	0000173c 	.word	0x0000173c
+
+000000e0 <__cs3_start_asm_sim>:
+      e0:	e28f103c 	add	r1, pc, #60	; 0x3c
+      e4:	e3a00016 	mov	r0, #22
+      e8:	ef123456 	svc	0x00123456
+      ec:	e3500000 	cmp	r0, #0
+      f0:	ba000008 	blt	118 <__cs3_start_asm_sim+0x38>
+      f4:	e59f2028 	ldr	r2, [pc, #40]	; 124 <__cs3_heap_start_ptr>
+      f8:	e59fd01c 	ldr	sp, [pc, #28]	; 11c <__cs3_start_asm_sim+0x3c>
+      fc:	e5920008 	ldr	r0, [r2, #8]
+     100:	e3500000 	cmp	r0, #0
+     104:	11a0d000 	movne	sp, r0
+     108:	e59f1010 	ldr	r1, [pc, #16]	; 120 <__cs3_start_asm_sim+0x40>
+     10c:	e5920004 	ldr	r0, [r2, #4]
+     110:	e3500000 	cmp	r0, #0
+     114:	15810000 	strne	r0, [r1]
+     118:	eaffffc9 	b	44 <__cs3_start_c>
+     11c:	3ffffff8 	.word	0x3ffffff8
+     120:	00001b78 	.word	0x00001b78
+
+00000124 <__cs3_heap_start_ptr>:
+     124:	00001ba0 	.word	0x00001ba0
+
+00000128 <_start>:
+     128:	e51fd000 	ldr	sp, [pc, #-0]	; 130 <_start+0x8>
+     12c:	eaffffc4 	b	44 <__cs3_start_c>
+     130:	3ffffff8 	.word	0x3ffffff8
+
+00000134 <deregister_tm_clones>:
+     134:	e92d4008 	push	{r3, lr}
+     138:	e59f002c 	ldr	r0, [pc, #44]	; 16c <deregister_tm_clones+0x38>
+     13c:	e59f302c 	ldr	r3, [pc, #44]	; 170 <deregister_tm_clones+0x3c>
+     140:	e0603003 	rsb	r3, r0, r3
+     144:	e3530006 	cmp	r3, #6
+     148:	8a000001 	bhi	154 <deregister_tm_clones+0x20>
+     14c:	e8bd4008 	pop	{r3, lr}
+     150:	e12fff1e 	bx	lr
+     154:	e59f3018 	ldr	r3, [pc, #24]	; 174 <deregister_tm_clones+0x40>
+     158:	e3530000 	cmp	r3, #0
+     15c:	0afffffa 	beq	14c <deregister_tm_clones+0x18>
+     160:	e1a0e00f 	mov	lr, pc
+     164:	e12fff13 	bx	r3
+     168:	eafffff7 	b	14c <deregister_tm_clones+0x18>
+     16c:	00001b80 	.word	0x00001b80
+     170:	00001b83 	.word	0x00001b83
+     174:	00000000 	.word	0x00000000
+
+00000178 <register_tm_clones>:
+     178:	e92d4008 	push	{r3, lr}
+     17c:	e59f0034 	ldr	r0, [pc, #52]	; 1b8 <register_tm_clones+0x40>
+     180:	e59f3034 	ldr	r3, [pc, #52]	; 1bc <register_tm_clones+0x44>
+     184:	e0603003 	rsb	r3, r0, r3
+     188:	e1a03143 	asr	r3, r3, #2
+     18c:	e0833fa3 	add	r3, r3, r3, lsr #31
+     190:	e1b010c3 	asrs	r1, r3, #1
+     194:	1a000001 	bne	1a0 <register_tm_clones+0x28>
+     198:	e8bd4008 	pop	{r3, lr}
+     19c:	e12fff1e 	bx	lr
+     1a0:	e59f2018 	ldr	r2, [pc, #24]	; 1c0 <register_tm_clones+0x48>
+     1a4:	e3520000 	cmp	r2, #0
+     1a8:	0afffffa 	beq	198 <register_tm_clones+0x20>
+     1ac:	e1a0e00f 	mov	lr, pc
+     1b0:	e12fff12 	bx	r2
+     1b4:	eafffff7 	b	198 <register_tm_clones+0x20>
+     1b8:	00001b80 	.word	0x00001b80
+     1bc:	00001b80 	.word	0x00001b80
+     1c0:	00000000 	.word	0x00000000
+
+000001c4 <__do_global_dtors_aux>:
+     1c4:	e92d4010 	push	{r4, lr}
+     1c8:	e59f402c 	ldr	r4, [pc, #44]	; 1fc <__do_global_dtors_aux+0x38>
+     1cc:	e5d43000 	ldrb	r3, [r4]
+     1d0:	e3530000 	cmp	r3, #0
+     1d4:	1a000006 	bne	1f4 <__do_global_dtors_aux+0x30>
+     1d8:	ebffffd5 	bl	134 <deregister_tm_clones>
+     1dc:	e59f301c 	ldr	r3, [pc, #28]	; 200 <__do_global_dtors_aux+0x3c>
+     1e0:	e3530000 	cmp	r3, #0
+     1e4:	159f0018 	ldrne	r0, [pc, #24]	; 204 <__do_global_dtors_aux+0x40>
+     1e8:	1320f000 	nopne	{0}
+     1ec:	e3a03001 	mov	r3, #1
+     1f0:	e5c43000 	strb	r3, [r4]
+     1f4:	e8bd4010 	pop	{r4, lr}
+     1f8:	e12fff1e 	bx	lr
+     1fc:	00001b80 	.word	0x00001b80
+     200:	00000000 	.word	0x00000000
+     204:	00001420 	.word	0x00001420
+
+00000208 <frame_dummy>:
+     208:	e92d4008 	push	{r3, lr}
+     20c:	e59f3034 	ldr	r3, [pc, #52]	; 248 <frame_dummy+0x40>
+     210:	e3530000 	cmp	r3, #0
+     214:	159f0030 	ldrne	r0, [pc, #48]	; 24c <frame_dummy+0x44>
+     218:	159f1030 	ldrne	r1, [pc, #48]	; 250 <frame_dummy+0x48>
+     21c:	1320f000 	nopne	{0}
+     220:	e59f002c 	ldr	r0, [pc, #44]	; 254 <frame_dummy+0x4c>
+     224:	e5903000 	ldr	r3, [r0]
+     228:	e3530000 	cmp	r3, #0
+     22c:	0a000003 	beq	240 <frame_dummy+0x38>
+     230:	e59f3020 	ldr	r3, [pc, #32]	; 258 <frame_dummy+0x50>
+     234:	e3530000 	cmp	r3, #0
+     238:	11a0e00f 	movne	lr, pc
+     23c:	112fff13 	bxne	r3
+     240:	e8bd4008 	pop	{r3, lr}
+     244:	eaffffcb 	b	178 <register_tm_clones>
+     248:	00000000 	.word	0x00000000
+     24c:	00001420 	.word	0x00001420
+     250:	00001b84 	.word	0x00001b84
+     254:	00001740 	.word	0x00001740
+     258:	00000000 	.word	0x00000000
+
+0000025c <KeyExpansion>:
+*/
+#define getSBoxInvert(num) (rsbox[(num)])
+
+// This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
+static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)
+{
+     25c:	e92d00f0 	push	{r4, r5, r6, r7}
+     260:	e1a03000 	mov	r3, r0
+}
+*/
+#define getSBoxInvert(num) (rsbox[(num)])
+
+// This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
+static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)
+     264:	e2814010 	add	r4, r1, #16
+  uint8_t tempa[4]; // Used for the column/row operations
+  
+  // The first round key is the key itself.
+  for (i = 0; i < Nk; ++i)
+  {
+    RoundKey[(i * 4) + 0] = Key[(i * 4) + 0];
+     268:	e5d1c000 	ldrb	r12, [r1]
+     26c:	e5c3c000 	strb	r12, [r3]
+    RoundKey[(i * 4) + 1] = Key[(i * 4) + 1];
+     270:	e5d1c001 	ldrb	r12, [r1, #1]
+     274:	e5c3c001 	strb	r12, [r3, #1]
+    RoundKey[(i * 4) + 2] = Key[(i * 4) + 2];
+     278:	e5d1c002 	ldrb	r12, [r1, #2]
+     27c:	e5c3c002 	strb	r12, [r3, #2]
+    RoundKey[(i * 4) + 3] = Key[(i * 4) + 3];
+     280:	e5d1c003 	ldrb	r12, [r1, #3]
+     284:	e5c3c003 	strb	r12, [r3, #3]
+     288:	e2811004 	add	r1, r1, #4
+     28c:	e2833004 	add	r3, r3, #4
+{
+  unsigned i, j, k;
+  uint8_t tempa[4]; // Used for the column/row operations
+  
+  // The first round key is the key itself.
+  for (i = 0; i < Nk; ++i)
+     290:	e1510004 	cmp	r1, r4
+     294:	1afffff3 	bne	268 <KeyExpansion+0xc>
+}
+*/
+#define getSBoxInvert(num) (rsbox[(num)])
+
+// This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
+static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)
+     298:	e280200c 	add	r2, r0, #12
+     29c:	e3a01004 	mov	r1, #4
+      // SubWord() is a function that takes a four-byte input word and 
+      // applies the S-box to each of the four bytes to produce an output word.
+
+      // Function Subword()
+      {
+        tempa[0] = getSBoxValue(tempa[0]);
+     2a0:	e3016424 	movw	r6, #5156	; 0x1424
+     2a4:	e3406000 	movt	r6, #0
+}
+*/
+#define getSBoxInvert(num) (rsbox[(num)])
+
+// This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
+static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)
+     2a8:	e1a03002 	mov	r3, r2
+  // All other round keys are found from the previous round keys.
+  for (i = Nk; i < Nb * (Nr + 1); ++i)
+  {
+    {
+      k = (i - 1) * 4;
+      tempa[0]=RoundKey[k + 0];
+     2ac:	e5d25000 	ldrb	r5, [r2]
+      tempa[1]=RoundKey[k + 1];
+     2b0:	e5d24001 	ldrb	r4, [r2, #1]
+      tempa[2]=RoundKey[k + 2];
+     2b4:	e5d2c002 	ldrb	r12, [r2, #2]
+      tempa[3]=RoundKey[k + 3];
+     2b8:	e5d20003 	ldrb	r0, [r2, #3]
+
+    }
+
+    if (i % Nk == 0)
+     2bc:	e3110003 	tst	r1, #3
+     2c0:	1a000006 	bne	2e0 <KeyExpansion+0x84>
+      // SubWord() is a function that takes a four-byte input word and 
+      // applies the S-box to each of the four bytes to produce an output word.
+
+      // Function Subword()
+      {
+        tempa[0] = getSBoxValue(tempa[0]);
+     2c4:	e7d67004 	ldrb	r7, [r6, r4]
+        tempa[1] = getSBoxValue(tempa[1]);
+     2c8:	e7d6400c 	ldrb	r4, [r6, r12]
+        tempa[2] = getSBoxValue(tempa[2]);
+     2cc:	e7d6c000 	ldrb	r12, [r6, r0]
+        tempa[3] = getSBoxValue(tempa[3]);
+     2d0:	e7d60005 	ldrb	r0, [r6, r5]
+      }
+
+      tempa[0] = tempa[0] ^ Rcon[i/Nk];
+     2d4:	e0865121 	add	r5, r6, r1, lsr #2
+     2d8:	e5d55100 	ldrb	r5, [r5, #256]	; 0x100
+     2dc:	e0275005 	eor	r5, r7, r5
+        tempa[3] = getSBoxValue(tempa[3]);
+      }
+    }
+#endif
+    j = i * 4; k=(i - Nk) * 4;
+    RoundKey[j + 0] = RoundKey[k + 0] ^ tempa[0];
+     2e0:	e553700c 	ldrb	r7, [r3, #-12]
+     2e4:	e0255007 	eor	r5, r5, r7
+     2e8:	e5c35004 	strb	r5, [r3, #4]
+    RoundKey[j + 1] = RoundKey[k + 1] ^ tempa[1];
+     2ec:	e553500b 	ldrb	r5, [r3, #-11]
+     2f0:	e0244005 	eor	r4, r4, r5
+     2f4:	e5c34005 	strb	r4, [r3, #5]
+    RoundKey[j + 2] = RoundKey[k + 2] ^ tempa[2];
+     2f8:	e553400a 	ldrb	r4, [r3, #-10]
+     2fc:	e02cc004 	eor	r12, r12, r4
+     300:	e5c3c006 	strb	r12, [r3, #6]
+    RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
+     304:	e553c009 	ldrb	r12, [r3, #-9]
+     308:	e020000c 	eor	r0, r0, r12
+     30c:	e5c30007 	strb	r0, [r3, #7]
+    RoundKey[(i * 4) + 2] = Key[(i * 4) + 2];
+    RoundKey[(i * 4) + 3] = Key[(i * 4) + 3];
+  }
+
+  // All other round keys are found from the previous round keys.
+  for (i = Nk; i < Nb * (Nr + 1); ++i)
+     310:	e2811001 	add	r1, r1, #1
+     314:	e2822004 	add	r2, r2, #4
+     318:	e351002c 	cmp	r1, #44	; 0x2c
+     31c:	1affffe1 	bne	2a8 <KeyExpansion+0x4c>
+    RoundKey[j + 0] = RoundKey[k + 0] ^ tempa[0];
+    RoundKey[j + 1] = RoundKey[k + 1] ^ tempa[1];
+    RoundKey[j + 2] = RoundKey[k + 2] ^ tempa[2];
+    RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
+  }
+}
+     320:	e8bd00f0 	pop	{r4, r5, r6, r7}
+     324:	e12fff1e 	bx	lr
+
+00000328 <AddRoundKey>:
+#endif
+
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)
+{
+     328:	e92d0030 	push	{r4, r5}
+}
+#endif
+
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)
+     32c:	e0822200 	add	r2, r2, r0, lsl #4
+     330:	e3a05000 	mov	r5, #0
+     334:	ea000008 	b	35c <AddRoundKey+0x34>
+  uint8_t i,j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[i][j] ^= RoundKey[(round * Nb * 4) + (i * Nb) + j];
+     338:	e5d30000 	ldrb	r0, [r3]
+     33c:	e4d2c001 	ldrb	r12, [r2], #1
+     340:	e02c0000 	eor	r0, r12, r0
+     344:	e4c30001 	strb	r0, [r3], #1
+static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)
+{
+  uint8_t i,j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+     348:	e1520004 	cmp	r2, r4
+     34c:	1afffff9 	bne	338 <AddRoundKey+0x10>
+     350:	e2855001 	add	r5, r5, #1
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)
+{
+  uint8_t i,j;
+  for (i = 0; i < 4; ++i)
+     354:	e3550004 	cmp	r5, #4
+     358:	0a000002 	beq	368 <AddRoundKey+0x40>
+}
+#endif
+
+// This function adds the round key to state.
+// The round key is added to the state by an XOR function.
+static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)
+     35c:	e0813105 	add	r3, r1, r5, lsl #2
+     360:	e2824004 	add	r4, r2, #4
+     364:	eafffff3 	b	338 <AddRoundKey+0x10>
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[i][j] ^= RoundKey[(round * Nb * 4) + (i * Nb) + j];
+    }
+  }
+}
+     368:	e8bd0030 	pop	{r4, r5}
+     36c:	e12fff1e 	bx	lr
+
+00000370 <SubBytes>:
+
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void SubBytes(state_t* state)
+{
+     370:	e52d4004 	push	{r4}		; (str r4, [sp, #-4]!)
+     374:	e3a0c004 	mov	r12, #4
+     378:	e3a04000 	mov	r4, #0
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[j][i] = getSBoxValue((*state)[j][i]);
+     37c:	e3011424 	movw	r1, #5156	; 0x1424
+     380:	e3401000 	movt	r1, #0
+     384:	ea000009 	b	3b0 <SubBytes+0x40>
+     388:	e7d02003 	ldrb	r2, [r0, r3]
+     38c:	e7d12002 	ldrb	r2, [r1, r2]
+     390:	e7c02003 	strb	r2, [r0, r3]
+     394:	e2833004 	add	r3, r3, #4
+static void SubBytes(state_t* state)
+{
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+     398:	e3530010 	cmp	r3, #16
+     39c:	1afffff9 	bne	388 <SubBytes+0x18>
+     3a0:	e24c3001 	sub	r3, r12, #1
+     3a4:	e2800001 	add	r0, r0, #1
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void SubBytes(state_t* state)
+{
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+     3a8:	e213c0ff 	ands	r12, r3, #255	; 0xff
+     3ac:	0a000001 	beq	3b8 <SubBytes+0x48>
+}
+
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void SubBytes(state_t* state)
+{
+     3b0:	e1a03004 	mov	r3, r4
+     3b4:	eafffff3 	b	388 <SubBytes+0x18>
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[j][i] = getSBoxValue((*state)[j][i]);
+    }
+  }
+}
+     3b8:	e8bd0010 	ldmfd	sp!, {r4}
+     3bc:	e12fff1e 	bx	lr
+
+000003c0 <ShiftRows>:
+static void ShiftRows(state_t* state)
+{
+  uint8_t temp;
+
+  // Rotate first row 1 columns to left  
+  temp           = (*state)[0][1];
+     3c0:	e5d03001 	ldrb	r3, [r0, #1]
+  (*state)[0][1] = (*state)[1][1];
+     3c4:	e5d02005 	ldrb	r2, [r0, #5]
+     3c8:	e5c02001 	strb	r2, [r0, #1]
+  (*state)[1][1] = (*state)[2][1];
+     3cc:	e5d02009 	ldrb	r2, [r0, #9]
+     3d0:	e5c02005 	strb	r2, [r0, #5]
+  (*state)[2][1] = (*state)[3][1];
+     3d4:	e5d0200d 	ldrb	r2, [r0, #13]
+     3d8:	e5c02009 	strb	r2, [r0, #9]
+  (*state)[3][1] = temp;
+     3dc:	e5c0300d 	strb	r3, [r0, #13]
+
+  // Rotate second row 2 columns to left  
+  temp           = (*state)[0][2];
+     3e0:	e5d03002 	ldrb	r3, [r0, #2]
+  (*state)[0][2] = (*state)[2][2];
+     3e4:	e5d0200a 	ldrb	r2, [r0, #10]
+     3e8:	e5c02002 	strb	r2, [r0, #2]
+  (*state)[2][2] = temp;
+     3ec:	e5c0300a 	strb	r3, [r0, #10]
+
+  temp           = (*state)[1][2];
+     3f0:	e5d03006 	ldrb	r3, [r0, #6]
+  (*state)[1][2] = (*state)[3][2];
+     3f4:	e5d0200e 	ldrb	r2, [r0, #14]
+     3f8:	e5c02006 	strb	r2, [r0, #6]
+  (*state)[3][2] = temp;
+     3fc:	e5c0300e 	strb	r3, [r0, #14]
+
+  // Rotate third row 3 columns to left
+  temp           = (*state)[0][3];
+     400:	e5d03003 	ldrb	r3, [r0, #3]
+  (*state)[0][3] = (*state)[3][3];
+     404:	e5d0200f 	ldrb	r2, [r0, #15]
+     408:	e5c02003 	strb	r2, [r0, #3]
+  (*state)[3][3] = (*state)[2][3];
+     40c:	e5d0200b 	ldrb	r2, [r0, #11]
+     410:	e5c0200f 	strb	r2, [r0, #15]
+  (*state)[2][3] = (*state)[1][3];
+     414:	e5d02007 	ldrb	r2, [r0, #7]
+     418:	e5c0200b 	strb	r2, [r0, #11]
+  (*state)[1][3] = temp;
+     41c:	e5c03007 	strb	r3, [r0, #7]
+     420:	e12fff1e 	bx	lr
+
+00000424 <xtime>:
+}
+
+static uint8_t xtime(uint8_t x)
+{
+  return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
+     424:	e1a033a0 	lsr	r3, r0, #7
+     428:	e1a02083 	lsl	r2, r3, #1
+     42c:	e0823003 	add	r3, r2, r3
+     430:	e0833183 	add	r3, r3, r3, lsl #3
+     434:	e0230080 	eor	r0, r3, r0, lsl #1
+}
+     438:	e6ef0070 	uxtb	r0, r0
+     43c:	e12fff1e 	bx	lr
+
+00000440 <InvSubBytes>:
+
+
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void InvSubBytes(state_t* state)
+{
+     440:	e52d4004 	push	{r4}		; (str r4, [sp, #-4]!)
+     444:	e3a0c004 	mov	r12, #4
+     448:	e3a04000 	mov	r4, #0
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[j][i] = getSBoxInvert((*state)[j][i]);
+     44c:	e3011424 	movw	r1, #5156	; 0x1424
+     450:	e3401000 	movt	r1, #0
+     454:	ea00000a 	b	484 <InvSubBytes+0x44>
+     458:	e7d02003 	ldrb	r2, [r0, r3]
+     45c:	e0812002 	add	r2, r1, r2
+     460:	e5d2210c 	ldrb	r2, [r2, #268]	; 0x10c
+     464:	e7c02003 	strb	r2, [r0, r3]
+     468:	e2833004 	add	r3, r3, #4
+static void InvSubBytes(state_t* state)
+{
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+  {
+    for (j = 0; j < 4; ++j)
+     46c:	e3530010 	cmp	r3, #16
+     470:	1afffff8 	bne	458 <InvSubBytes+0x18>
+     474:	e24c3001 	sub	r3, r12, #1
+     478:	e2800001 	add	r0, r0, #1
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void InvSubBytes(state_t* state)
+{
+  uint8_t i, j;
+  for (i = 0; i < 4; ++i)
+     47c:	e213c0ff 	ands	r12, r3, #255	; 0xff
+     480:	0a000001 	beq	48c <InvSubBytes+0x4c>
+
+
+// The SubBytes Function Substitutes the values in the
+// state matrix with values in an S-box.
+static void InvSubBytes(state_t* state)
+{
+     484:	e1a03004 	mov	r3, r4
+     488:	eafffff2 	b	458 <InvSubBytes+0x18>
+    for (j = 0; j < 4; ++j)
+    {
+      (*state)[j][i] = getSBoxInvert((*state)[j][i]);
+    }
+  }
+}
+     48c:	e8bd0010 	ldmfd	sp!, {r4}
+     490:	e12fff1e 	bx	lr
+
+00000494 <InvShiftRows>:
+static void InvShiftRows(state_t* state)
+{
+  uint8_t temp;
+
+  // Rotate first row 1 columns to right  
+  temp = (*state)[3][1];
+     494:	e5d0300d 	ldrb	r3, [r0, #13]
+  (*state)[3][1] = (*state)[2][1];
+     498:	e5d02009 	ldrb	r2, [r0, #9]
+     49c:	e5c0200d 	strb	r2, [r0, #13]
+  (*state)[2][1] = (*state)[1][1];
+     4a0:	e5d02005 	ldrb	r2, [r0, #5]
+     4a4:	e5c02009 	strb	r2, [r0, #9]
+  (*state)[1][1] = (*state)[0][1];
+     4a8:	e5d02001 	ldrb	r2, [r0, #1]
+     4ac:	e5c02005 	strb	r2, [r0, #5]
+  (*state)[0][1] = temp;
+     4b0:	e5c03001 	strb	r3, [r0, #1]
+
+  // Rotate second row 2 columns to right 
+  temp = (*state)[0][2];
+     4b4:	e5d03002 	ldrb	r3, [r0, #2]
+  (*state)[0][2] = (*state)[2][2];
+     4b8:	e5d0200a 	ldrb	r2, [r0, #10]
+     4bc:	e5c02002 	strb	r2, [r0, #2]
+  (*state)[2][2] = temp;
+     4c0:	e5c0300a 	strb	r3, [r0, #10]
+
+  temp = (*state)[1][2];
+     4c4:	e5d03006 	ldrb	r3, [r0, #6]
+  (*state)[1][2] = (*state)[3][2];
+     4c8:	e5d0200e 	ldrb	r2, [r0, #14]
+     4cc:	e5c02006 	strb	r2, [r0, #6]
+  (*state)[3][2] = temp;
+     4d0:	e5c0300e 	strb	r3, [r0, #14]
+
+  // Rotate third row 3 columns to right
+  temp = (*state)[0][3];
+     4d4:	e5d03003 	ldrb	r3, [r0, #3]
+  (*state)[0][3] = (*state)[1][3];
+     4d8:	e5d02007 	ldrb	r2, [r0, #7]
+     4dc:	e5c02003 	strb	r2, [r0, #3]
+  (*state)[1][3] = (*state)[2][3];
+     4e0:	e5d0200b 	ldrb	r2, [r0, #11]
+     4e4:	e5c02007 	strb	r2, [r0, #7]
+  (*state)[2][3] = (*state)[3][3];
+     4e8:	e5d0200f 	ldrb	r2, [r0, #15]
+     4ec:	e5c0200b 	strb	r2, [r0, #11]
+  (*state)[3][3] = temp;
+     4f0:	e5c0300f 	strb	r3, [r0, #15]
+     4f4:	e12fff1e 	bx	lr
+
+000004f8 <Cipher>:
+}
+#endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
+
+// Cipher is the main function that encrypts the PlainText.
+static void Cipher(state_t* state, const uint8_t* RoundKey)
+{
+     4f8:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+     4fc:	e24dd00c 	sub	sp, sp, #12
+     500:	e1a09000 	mov	r9, r0
+     504:	e58d1004 	str	r1, [sp, #4]
+  uint8_t round = 0;
+
+  // Add the First round key to the state before starting the rounds.
+  AddRoundKey(0, state, RoundKey); 
+     508:	e3a00000 	mov	r0, #0
+     50c:	e1a01009 	mov	r1, r9
+     510:	e59d2004 	ldr	r2, [sp, #4]
+     514:	ebffff83 	bl	328 <AddRoundKey>
+  
+  // There will be Nr rounds.
+  // The first Nr-1 rounds are identical.
+  // These Nr-1 rounds are executed in the loop below.
+  for (round = 1; round < Nr; ++round)
+     518:	e3a0b001 	mov	r11, #1
+  {
+    SubBytes(state);
+     51c:	e1a00009 	mov	r0, r9
+     520:	ebffff92 	bl	370 <SubBytes>
+    ShiftRows(state);
+     524:	e1a00009 	mov	r0, r9
+     528:	ebffffa4 	bl	3c0 <ShiftRows>
+     52c:	e1a04009 	mov	r4, r9
+     530:	e3a05000 	mov	r5, #0
+{
+  uint8_t i;
+  uint8_t Tmp, Tm, t;
+  for (i = 0; i < 4; ++i)
+  {  
+    t   = (*state)[i][0];
+     534:	e7d98005 	ldrb	r8, [r9, r5]
+    Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
+     538:	e5d40001 	ldrb	r0, [r4, #1]
+     53c:	e0280000 	eor	r0, r8, r0
+     540:	e5d46003 	ldrb	r6, [r4, #3]
+     544:	e5d43002 	ldrb	r3, [r4, #2]
+     548:	e0266003 	eor	r6, r6, r3
+     54c:	e0206006 	eor	r6, r0, r6
+    Tm  = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm);  (*state)[i][0] ^= Tm ^ Tmp ;
+     550:	ebffffb3 	bl	424 <xtime>
+     554:	e0280000 	eor	r0, r8, r0
+     558:	e0260000 	eor	r0, r6, r0
+     55c:	e7c90005 	strb	r0, [r9, r5]
+    Tm  = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm);  (*state)[i][1] ^= Tm ^ Tmp ;
+     560:	e5d47001 	ldrb	r7, [r4, #1]
+     564:	e5d4a002 	ldrb	r10, [r4, #2]
+     568:	e027000a 	eor	r0, r7, r10
+     56c:	ebffffac 	bl	424 <xtime>
+     570:	e0270000 	eor	r0, r7, r0
+     574:	e0267000 	eor	r7, r6, r0
+     578:	e5c47001 	strb	r7, [r4, #1]
+    Tm  = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm);  (*state)[i][2] ^= Tm ^ Tmp ;
+     57c:	e5d47003 	ldrb	r7, [r4, #3]
+     580:	e02a0007 	eor	r0, r10, r7
+     584:	ebffffa6 	bl	424 <xtime>
+     588:	e02a0000 	eor	r0, r10, r0
+     58c:	e026a000 	eor	r10, r6, r0
+     590:	e5c4a002 	strb	r10, [r4, #2]
+    Tm  = (*state)[i][3] ^ t ;              Tm = xtime(Tm);  (*state)[i][3] ^= Tm ^ Tmp ;
+     594:	e0270008 	eor	r0, r7, r8
+     598:	ebffffa1 	bl	424 <xtime>
+     59c:	e0270000 	eor	r0, r7, r0
+     5a0:	e0266000 	eor	r6, r6, r0
+     5a4:	e5c46003 	strb	r6, [r4, #3]
+     5a8:	e2855004 	add	r5, r5, #4
+     5ac:	e2844004 	add	r4, r4, #4
+// MixColumns function mixes the columns of the state matrix
+static void MixColumns(state_t* state)
+{
+  uint8_t i;
+  uint8_t Tmp, Tm, t;
+  for (i = 0; i < 4; ++i)
+     5b0:	e3550010 	cmp	r5, #16
+     5b4:	1affffde 	bne	534 <Cipher+0x3c>
+  for (round = 1; round < Nr; ++round)
+  {
+    SubBytes(state);
+    ShiftRows(state);
+    MixColumns(state);
+    AddRoundKey(round, state, RoundKey);
+     5b8:	e1a0000b 	mov	r0, r11
+     5bc:	e1a01009 	mov	r1, r9
+     5c0:	e59d2004 	ldr	r2, [sp, #4]
+     5c4:	ebffff57 	bl	328 <AddRoundKey>
+  AddRoundKey(0, state, RoundKey); 
+  
+  // There will be Nr rounds.
+  // The first Nr-1 rounds are identical.
+  // These Nr-1 rounds are executed in the loop below.
+  for (round = 1; round < Nr; ++round)
+     5c8:	e28bb001 	add	r11, r11, #1
+     5cc:	e6efb07b 	uxtb	r11, r11
+     5d0:	e35b000a 	cmp	r11, #10
+     5d4:	1affffd0 	bne	51c <Cipher+0x24>
+    AddRoundKey(round, state, RoundKey);
+  }
+  
+  // The last round is given below.
+  // The MixColumns function is not here in the last round.
+  SubBytes(state);
+     5d8:	e1a00009 	mov	r0, r9
+     5dc:	ebffff63 	bl	370 <SubBytes>
+  ShiftRows(state);
+     5e0:	e1a00009 	mov	r0, r9
+     5e4:	ebffff75 	bl	3c0 <ShiftRows>
+  AddRoundKey(Nr, state, RoundKey);
+     5e8:	e3a0000a 	mov	r0, #10
+     5ec:	e1a01009 	mov	r1, r9
+     5f0:	e59d2004 	ldr	r2, [sp, #4]
+     5f4:	ebffff4b 	bl	328 <AddRoundKey>
+}
+     5f8:	e28dd00c 	add	sp, sp, #12
+     5fc:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+
+00000600 <InvCipher>:
+
+#if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
+static void InvCipher(state_t* state, const uint8_t* RoundKey)
+{
+     600:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+     604:	e24dd034 	sub	sp, sp, #52	; 0x34
+     608:	e58d0004 	str	r0, [sp, #4]
+     60c:	e58d102c 	str	r1, [sp, #44]	; 0x2c
+  uint8_t round = 0;
+
+  // Add the First round key to the state before starting the rounds.
+  AddRoundKey(Nr, state, RoundKey); 
+     610:	e3a0000a 	mov	r0, #10
+     614:	e59d1004 	ldr	r1, [sp, #4]
+     618:	e59d202c 	ldr	r2, [sp, #44]	; 0x2c
+     61c:	ebffff41 	bl	328 <AddRoundKey>
+
+  // There will be Nr rounds.
+  // The first Nr-1 rounds are identical.
+  // These Nr-1 rounds are executed in the loop below.
+  for (round = (Nr - 1); round > 0; --round)
+     620:	e3a01009 	mov	r1, #9
+     624:	e58d1028 	str	r1, [sp, #40]	; 0x28
+  {
+    InvShiftRows(state);
+     628:	e59d0004 	ldr	r0, [sp, #4]
+     62c:	ebffff98 	bl	494 <InvShiftRows>
+    InvSubBytes(state);
+     630:	e59d0004 	ldr	r0, [sp, #4]
+     634:	ebffff81 	bl	440 <InvSubBytes>
+    AddRoundKey(round, state, RoundKey);
+     638:	e59d0028 	ldr	r0, [sp, #40]	; 0x28
+     63c:	e59d1004 	ldr	r1, [sp, #4]
+     640:	e59d202c 	ldr	r2, [sp, #44]	; 0x2c
+     644:	ebffff37 	bl	328 <AddRoundKey>
+     648:	e59db004 	ldr	r11, [sp, #4]
+     64c:	e3a02000 	mov	r2, #0
+     650:	e58d2000 	str	r2, [sp]
+{
+  int i;
+  uint8_t a, b, c, d;
+  for (i = 0; i < 4; ++i)
+  { 
+    a = (*state)[i][0];
+     654:	e59d1004 	ldr	r1, [sp, #4]
+     658:	e59d3000 	ldr	r3, [sp]
+     65c:	e7d15003 	ldrb	r5, [r1, r3]
+    b = (*state)[i][1];
+     660:	e5db4001 	ldrb	r4, [r11, #1]
+    c = (*state)[i][2];
+     664:	e5db9002 	ldrb	r9, [r11, #2]
+    d = (*state)[i][3];
+     668:	e5dba003 	ldrb	r10, [r11, #3]
+
+    (*state)[i][0] = Multiply(a, 0x0e) ^ Multiply(b, 0x0b) ^ Multiply(c, 0x0d) ^ Multiply(d, 0x09);
+     66c:	e1a00005 	mov	r0, r5
+     670:	ebffff6b 	bl	424 <xtime>
+     674:	e58d0008 	str	r0, [sp, #8]
+     678:	ebffff69 	bl	424 <xtime>
+     67c:	e58d000c 	str	r0, [sp, #12]
+     680:	ebffff67 	bl	424 <xtime>
+     684:	e1a08000 	mov	r8, r0
+     688:	e1a00004 	mov	r0, r4
+     68c:	ebffff64 	bl	424 <xtime>
+     690:	e58d0010 	str	r0, [sp, #16]
+     694:	ebffff62 	bl	424 <xtime>
+     698:	e58d0014 	str	r0, [sp, #20]
+     69c:	ebffff60 	bl	424 <xtime>
+     6a0:	e1a07000 	mov	r7, r0
+     6a4:	e1a00009 	mov	r0, r9
+     6a8:	ebffff5d 	bl	424 <xtime>
+     6ac:	e58d0018 	str	r0, [sp, #24]
+     6b0:	ebffff5b 	bl	424 <xtime>
+     6b4:	e58d001c 	str	r0, [sp, #28]
+     6b8:	ebffff59 	bl	424 <xtime>
+     6bc:	e1a06000 	mov	r6, r0
+     6c0:	e1a0000a 	mov	r0, r10
+     6c4:	ebffff56 	bl	424 <xtime>
+     6c8:	e58d0020 	str	r0, [sp, #32]
+     6cc:	ebffff54 	bl	424 <xtime>
+     6d0:	e58d0024 	str	r0, [sp, #36]	; 0x24
+     6d4:	ebffff52 	bl	424 <xtime>
+     6d8:	e59d200c 	ldr	r2, [sp, #12]
+     6dc:	e59d1008 	ldr	r1, [sp, #8]
+     6e0:	e0223001 	eor	r3, r2, r1
+     6e4:	e0283003 	eor	r3, r8, r3
+     6e8:	e59d2010 	ldr	r2, [sp, #16]
+     6ec:	e0223003 	eor	r3, r2, r3
+     6f0:	e0273003 	eor	r3, r7, r3
+     6f4:	e59d101c 	ldr	r1, [sp, #28]
+     6f8:	e0213003 	eor	r3, r1, r3
+     6fc:	e0263003 	eor	r3, r6, r3
+     700:	e0203003 	eor	r3, r0, r3
+     704:	e0243003 	eor	r3, r4, r3
+     708:	e0293003 	eor	r3, r9, r3
+     70c:	e02a3003 	eor	r3, r10, r3
+     710:	e59d1004 	ldr	r1, [sp, #4]
+     714:	e59d2000 	ldr	r2, [sp]
+     718:	e7c13002 	strb	r3, [r1, r2]
+    (*state)[i][1] = Multiply(a, 0x09) ^ Multiply(b, 0x0e) ^ Multiply(c, 0x0b) ^ Multiply(d, 0x0d);
+     71c:	e59d2010 	ldr	r2, [sp, #16]
+     720:	e0223008 	eor	r3, r2, r8
+     724:	e59d1014 	ldr	r1, [sp, #20]
+     728:	e0213003 	eor	r3, r1, r3
+     72c:	e0273003 	eor	r3, r7, r3
+     730:	e59d2018 	ldr	r2, [sp, #24]
+     734:	e0223003 	eor	r3, r2, r3
+     738:	e0263003 	eor	r3, r6, r3
+     73c:	e59d1024 	ldr	r1, [sp, #36]	; 0x24
+     740:	e0213003 	eor	r3, r1, r3
+     744:	e0203003 	eor	r3, r0, r3
+     748:	e0253003 	eor	r3, r5, r3
+     74c:	e0293003 	eor	r3, r9, r3
+     750:	e02a3003 	eor	r3, r10, r3
+     754:	e5cb3001 	strb	r3, [r11, #1]
+    (*state)[i][2] = Multiply(a, 0x0d) ^ Multiply(b, 0x09) ^ Multiply(c, 0x0e) ^ Multiply(d, 0x0b);
+     758:	e59d200c 	ldr	r2, [sp, #12]
+     75c:	e0283002 	eor	r3, r8, r2
+     760:	e0273003 	eor	r3, r7, r3
+     764:	e59d1018 	ldr	r1, [sp, #24]
+     768:	e0213003 	eor	r3, r1, r3
+     76c:	e59d201c 	ldr	r2, [sp, #28]
+     770:	e0223003 	eor	r3, r2, r3
+     774:	e0263003 	eor	r3, r6, r3
+     778:	e59d1020 	ldr	r1, [sp, #32]
+     77c:	e0213003 	eor	r3, r1, r3
+     780:	e0203003 	eor	r3, r0, r3
+     784:	e0253003 	eor	r3, r5, r3
+     788:	e0243003 	eor	r3, r4, r3
+     78c:	e02aa003 	eor	r10, r10, r3
+     790:	e5cba002 	strb	r10, [r11, #2]
+    (*state)[i][3] = Multiply(a, 0x0b) ^ Multiply(b, 0x0d) ^ Multiply(c, 0x09) ^ Multiply(d, 0x0e);
+     794:	e59d2008 	ldr	r2, [sp, #8]
+     798:	e0288002 	eor	r8, r8, r2
+     79c:	e59d3014 	ldr	r3, [sp, #20]
+     7a0:	e0238008 	eor	r8, r3, r8
+     7a4:	e0277008 	eor	r7, r7, r8
+     7a8:	e0266007 	eor	r6, r6, r7
+     7ac:	e0216006 	eor	r6, r1, r6
+     7b0:	e59d1024 	ldr	r1, [sp, #36]	; 0x24
+     7b4:	e0216006 	eor	r6, r1, r6
+     7b8:	e0200006 	eor	r0, r0, r6
+     7bc:	e0255000 	eor	r5, r5, r0
+     7c0:	e0244005 	eor	r4, r4, r5
+     7c4:	e0294004 	eor	r4, r9, r4
+     7c8:	e5cb4003 	strb	r4, [r11, #3]
+     7cc:	e59d2000 	ldr	r2, [sp]
+     7d0:	e2822004 	add	r2, r2, #4
+     7d4:	e58d2000 	str	r2, [sp]
+     7d8:	e28bb004 	add	r11, r11, #4
+// Please use the references to gain more information.
+static void InvMixColumns(state_t* state)
+{
+  int i;
+  uint8_t a, b, c, d;
+  for (i = 0; i < 4; ++i)
+     7dc:	e3520010 	cmp	r2, #16
+     7e0:	1affff9b 	bne	654 <InvCipher+0x54>
+  AddRoundKey(Nr, state, RoundKey); 
+
+  // There will be Nr rounds.
+  // The first Nr-1 rounds are identical.
+  // These Nr-1 rounds are executed in the loop below.
+  for (round = (Nr - 1); round > 0; --round)
+     7e4:	e59d1028 	ldr	r1, [sp, #40]	; 0x28
+     7e8:	e2413001 	sub	r3, r1, #1
+     7ec:	e21330ff 	ands	r3, r3, #255	; 0xff
+     7f0:	e58d3028 	str	r3, [sp, #40]	; 0x28
+     7f4:	1affff8b 	bne	628 <InvCipher+0x28>
+    InvMixColumns(state);
+  }
+  
+  // The last round is given below.
+  // The MixColumns function is not here in the last round.
+  InvShiftRows(state);
+     7f8:	e59d0004 	ldr	r0, [sp, #4]
+     7fc:	ebffff24 	bl	494 <InvShiftRows>
+  InvSubBytes(state);
+     800:	e59d0004 	ldr	r0, [sp, #4]
+     804:	ebffff0d 	bl	440 <InvSubBytes>
+  AddRoundKey(0, state, RoundKey);
+     808:	e3a00000 	mov	r0, #0
+     80c:	e59d1004 	ldr	r1, [sp, #4]
+     810:	e59d202c 	ldr	r2, [sp, #44]	; 0x2c
+     814:	ebfffec3 	bl	328 <AddRoundKey>
+}
+     818:	e28dd034 	add	sp, sp, #52	; 0x34
+     81c:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+
+00000820 <XorWithIv>:
+
+#if defined(CBC) && (CBC == 1)
+
+
+static void XorWithIv(uint8_t* buf, const uint8_t* Iv)
+{
+     820:	e3a03000 	mov	r3, #0
+  uint8_t i;
+  for (i = 0; i < AES_BLOCKLEN; ++i) // The block in AES is always 128bit no matter the key size
+  {
+    buf[i] ^= Iv[i];
+     824:	e7d1c003 	ldrb	r12, [r1, r3]
+     828:	e7d02003 	ldrb	r2, [r0, r3]
+     82c:	e02c2002 	eor	r2, r12, r2
+     830:	e7c02003 	strb	r2, [r0, r3]
+     834:	e2833001 	add	r3, r3, #1
+
+
+static void XorWithIv(uint8_t* buf, const uint8_t* Iv)
+{
+  uint8_t i;
+  for (i = 0; i < AES_BLOCKLEN; ++i) // The block in AES is always 128bit no matter the key size
+     838:	e3530010 	cmp	r3, #16
+     83c:	1afffff8 	bne	824 <XorWithIv+0x4>
+  {
+    buf[i] ^= Iv[i];
+  }
+}
+     840:	e12fff1e 	bx	lr
+
+00000844 <AES_init_ctx>:
+    RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
+  }
+}
+
+void AES_init_ctx(struct AES_ctx* ctx, const uint8_t* key)
+{
+     844:	e92d4008 	push	{r3, lr}
+  KeyExpansion(ctx->RoundKey, key);
+     848:	ebfffe83 	bl	25c <KeyExpansion>
+     84c:	e8bd8008 	pop	{r3, pc}
+
+00000850 <AES_init_ctx_iv>:
+}
+#if (defined(CBC) && (CBC == 1)) || (defined(CTR) && (CTR == 1))
+void AES_init_ctx_iv(struct AES_ctx* ctx, const uint8_t* key, const uint8_t* iv)
+{
+     850:	e92d4038 	push	{r3, r4, r5, lr}
+     854:	e1a05000 	mov	r5, r0
+     858:	e1a04002 	mov	r4, r2
+  KeyExpansion(ctx->RoundKey, key);
+     85c:	ebfffe7e 	bl	25c <KeyExpansion>
+  memcpy (ctx->Iv, iv, AES_BLOCKLEN);
+     860:	e594c000 	ldr	r12, [r4]
+     864:	e5940004 	ldr	r0, [r4, #4]
+     868:	e5941008 	ldr	r1, [r4, #8]
+     86c:	e594200c 	ldr	r2, [r4, #12]
+     870:	e585c0b0 	str	r12, [r5, #176]	; 0xb0
+     874:	e58500b4 	str	r0, [r5, #180]	; 0xb4
+     878:	e58510b8 	str	r1, [r5, #184]	; 0xb8
+     87c:	e58520bc 	str	r2, [r5, #188]	; 0xbc
+     880:	e8bd8038 	pop	{r3, r4, r5, pc}
+
+00000884 <AES_ctx_set_iv>:
+}
+void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
+{
+     884:	e92d0030 	push	{r4, r5}
+  memcpy (ctx->Iv, iv, AES_BLOCKLEN);
+     888:	e5915000 	ldr	r5, [r1]
+     88c:	e5914004 	ldr	r4, [r1, #4]
+     890:	e591c008 	ldr	r12, [r1, #8]
+     894:	e591200c 	ldr	r2, [r1, #12]
+     898:	e58050b0 	str	r5, [r0, #176]	; 0xb0
+     89c:	e58040b4 	str	r4, [r0, #180]	; 0xb4
+     8a0:	e580c0b8 	str	r12, [r0, #184]	; 0xb8
+     8a4:	e58020bc 	str	r2, [r0, #188]	; 0xbc
+}
+     8a8:	e8bd0030 	pop	{r4, r5}
+     8ac:	e12fff1e 	bx	lr
+
+000008b0 <AES_ECB_encrypt>:
+/*****************************************************************************/
+#if defined(ECB) && (ECB == 1)
+
+
+void AES_ECB_encrypt(const struct AES_ctx* ctx, uint8_t* buf)
+{
+     8b0:	e92d4008 	push	{r3, lr}
+     8b4:	e1a03000 	mov	r3, r0
+  // The next function call encrypts the PlainText with the Key using AES algorithm.
+  Cipher((state_t*)buf, ctx->RoundKey);
+     8b8:	e1a00001 	mov	r0, r1
+     8bc:	e1a01003 	mov	r1, r3
+     8c0:	ebffff0c 	bl	4f8 <Cipher>
+     8c4:	e8bd8008 	pop	{r3, pc}
+
+000008c8 <AES_ECB_decrypt>:
+}
+
+void AES_ECB_decrypt(const struct AES_ctx* ctx, uint8_t* buf)
+{
+     8c8:	e92d4008 	push	{r3, lr}
+     8cc:	e1a03000 	mov	r3, r0
+  // The next function call decrypts the PlainText with the Key using AES algorithm.
+  InvCipher((state_t*)buf, ctx->RoundKey);
+     8d0:	e1a00001 	mov	r0, r1
+     8d4:	e1a01003 	mov	r1, r3
+     8d8:	ebffff48 	bl	600 <InvCipher>
+     8dc:	e8bd8008 	pop	{r3, pc}
+
+000008e0 <AES_CBC_encrypt_buffer>:
+    buf[i] ^= Iv[i];
+  }
+}
+
+void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)
+{
+     8e0:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+     8e4:	e1a05000 	mov	r5, r0
+     8e8:	e1a06001 	mov	r6, r1
+  uintptr_t i;
+  uint8_t *Iv = ctx->Iv;
+     8ec:	e28080b0 	add	r8, r0, #176	; 0xb0
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+     8f0:	e2527000 	subs	r7, r2, #0
+     8f4:	0a00000e 	beq	934 <AES_CBC_encrypt_buffer+0x54>
+}
+
+void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)
+{
+  uintptr_t i;
+  uint8_t *Iv = ctx->Iv;
+     8f8:	e1a01008 	mov	r1, r8
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+     8fc:	e1a04006 	mov	r4, r6
+     900:	ea000000 	b	908 <AES_CBC_encrypt_buffer+0x28>
+  {
+    XorWithIv(buf, Iv);
+    Cipher((state_t*)buf, ctx->RoundKey);
+    Iv = buf;
+    buf += AES_BLOCKLEN;
+     904:	e1a04003 	mov	r4, r3
+{
+  uintptr_t i;
+  uint8_t *Iv = ctx->Iv;
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+  {
+    XorWithIv(buf, Iv);
+     908:	e1a00004 	mov	r0, r4
+     90c:	ebffffc3 	bl	820 <XorWithIv>
+    Cipher((state_t*)buf, ctx->RoundKey);
+     910:	e1a00004 	mov	r0, r4
+     914:	e1a01005 	mov	r1, r5
+     918:	ebfffef6 	bl	4f8 <Cipher>
+    Iv = buf;
+    buf += AES_BLOCKLEN;
+     91c:	e2843010 	add	r3, r4, #16
+     920:	e066c003 	rsb	r12, r6, r3
+     924:	e1a01004 	mov	r1, r4
+
+void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)
+{
+  uintptr_t i;
+  uint8_t *Iv = ctx->Iv;
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+     928:	e15c0007 	cmp	r12, r7
+     92c:	3afffff4 	bcc	904 <AES_CBC_encrypt_buffer+0x24>
+     930:	ea000000 	b	938 <AES_CBC_encrypt_buffer+0x58>
+}
+
+void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)
+{
+  uintptr_t i;
+  uint8_t *Iv = ctx->Iv;
+     934:	e1a04008 	mov	r4, r8
+    Iv = buf;
+    buf += AES_BLOCKLEN;
+    //printf("Step %d - %d", i/16, i);
+  }
+  /* store Iv in ctx for next call */
+  memcpy(ctx->Iv, Iv, AES_BLOCKLEN);
+     938:	e5940000 	ldr	r0, [r4]
+     93c:	e5941004 	ldr	r1, [r4, #4]
+     940:	e5942008 	ldr	r2, [r4, #8]
+     944:	e594300c 	ldr	r3, [r4, #12]
+     948:	e58500b0 	str	r0, [r5, #176]	; 0xb0
+     94c:	e5881004 	str	r1, [r8, #4]
+     950:	e5882008 	str	r2, [r8, #8]
+     954:	e588300c 	str	r3, [r8, #12]
+     958:	e8bd81f0 	pop	{r4, r5, r6, r7, r8, pc}
+
+0000095c <AES_CBC_decrypt_buffer>:
+}
+
+void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf,  uint32_t length)
+{
+     95c:	e92d45f0 	push	{r4, r5, r6, r7, r8, r10, lr}
+     960:	e24dd014 	sub	sp, sp, #20
+     964:	e1a07000 	mov	r7, r0
+     968:	e1a08001 	mov	r8, r1
+  uintptr_t i;
+  uint8_t storeNextIv[AES_BLOCKLEN];
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+     96c:	e252a000 	subs	r10, r2, #0
+     970:	0a000017 	beq	9d4 <AES_CBC_decrypt_buffer+0x78>
+     974:	e3a06000 	mov	r6, #0
+  {
+    memcpy(storeNextIv, buf, AES_BLOCKLEN);
+    InvCipher((state_t*)buf, ctx->RoundKey);
+    XorWithIv(buf, ctx->Iv);
+     978:	e28050b0 	add	r5, r0, #176	; 0xb0
+  }
+  /* store Iv in ctx for next call */
+  memcpy(ctx->Iv, Iv, AES_BLOCKLEN);
+}
+
+void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf,  uint32_t length)
+     97c:	e0884006 	add	r4, r8, r6
+{
+  uintptr_t i;
+  uint8_t storeNextIv[AES_BLOCKLEN];
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+  {
+    memcpy(storeNextIv, buf, AES_BLOCKLEN);
+     980:	e1a0c00d 	mov	r12, sp
+     984:	e5940000 	ldr	r0, [r4]
+     988:	e5941004 	ldr	r1, [r4, #4]
+     98c:	e5942008 	ldr	r2, [r4, #8]
+     990:	e594300c 	ldr	r3, [r4, #12]
+     994:	e8ac000f 	stmia	r12!, {r0, r1, r2, r3}
+    InvCipher((state_t*)buf, ctx->RoundKey);
+     998:	e1a00004 	mov	r0, r4
+     99c:	e1a01007 	mov	r1, r7
+     9a0:	ebffff16 	bl	600 <InvCipher>
+    XorWithIv(buf, ctx->Iv);
+     9a4:	e1a00004 	mov	r0, r4
+     9a8:	e1a01005 	mov	r1, r5
+     9ac:	ebffff9b 	bl	820 <XorWithIv>
+    memcpy(ctx->Iv, storeNextIv, AES_BLOCKLEN);
+     9b0:	e1a0c00d 	mov	r12, sp
+     9b4:	e8bc000f 	ldm	r12!, {r0, r1, r2, r3}
+     9b8:	e5850000 	str	r0, [r5]
+     9bc:	e5851004 	str	r1, [r5, #4]
+     9c0:	e5852008 	str	r2, [r5, #8]
+     9c4:	e585300c 	str	r3, [r5, #12]
+
+void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf,  uint32_t length)
+{
+  uintptr_t i;
+  uint8_t storeNextIv[AES_BLOCKLEN];
+  for (i = 0; i < length; i += AES_BLOCKLEN)
+     9c8:	e2866010 	add	r6, r6, #16
+     9cc:	e15a0006 	cmp	r10, r6
+     9d0:	8affffe9 	bhi	97c <AES_CBC_decrypt_buffer+0x20>
+    XorWithIv(buf, ctx->Iv);
+    memcpy(ctx->Iv, storeNextIv, AES_BLOCKLEN);
+    buf += AES_BLOCKLEN;
+  }
+
+}
+     9d4:	e28dd014 	add	sp, sp, #20
+     9d8:	e8bd85f0 	pop	{r4, r5, r6, r7, r8, r10, pc}
+
+000009dc <AES_CTR_xcrypt_buffer>:
+
+#if defined(CTR) && (CTR == 1)
+
+/* Symmetrical operation: same function for encrypting as for decrypting. Note any IV/nonce should never be reused with the same key */
+void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
+{
+     9dc:	e92d45f0 	push	{r4, r5, r6, r7, r8, r10, lr}
+     9e0:	e24dd014 	sub	sp, sp, #20
+     9e4:	e1a06000 	mov	r6, r0
+  uint8_t buffer[AES_BLOCKLEN];
+  
+  unsigned i;
+  int bi;
+  for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
+     9e8:	e3520000 	cmp	r2, #0
+     9ec:	0a000032 	beq	abc <AES_CTR_xcrypt_buffer+0xe0>
+     9f0:	e1a04001 	mov	r4, r1
+
+
+#if defined(CTR) && (CTR == 1)
+
+/* Symmetrical operation: same function for encrypting as for decrypting. Note any IV/nonce should never be reused with the same key */
+void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
+     9f4:	e0815002 	add	r5, r1, r2
+{
+  uint8_t buffer[AES_BLOCKLEN];
+  
+  unsigned i;
+  int bi;
+  for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
+     9f8:	e3a03010 	mov	r3, #16
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+      {
+	/* inc will overflow */
+        if (ctx->Iv[bi] == 255)
+	{
+          ctx->Iv[bi] = 0;
+     9fc:	e3a07000 	mov	r7, #0
+      
+      memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+      Cipher((state_t*)buffer,ctx->RoundKey);
+
+      /* Increment Iv and handle overflow */
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+     a00:	e3a0a00e 	mov	r10, #14
+     a04:	e3a0800f 	mov	r8, #15
+  
+  unsigned i;
+  int bi;
+  for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
+  {
+    if (bi == AES_BLOCKLEN) /* we need to regen xor compliment in buffer */
+     a08:	e3530010 	cmp	r3, #16
+     a0c:	1a00001c 	bne	a84 <AES_CTR_xcrypt_buffer+0xa8>
+    {
+      
+      memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+     a10:	e1a0c00d 	mov	r12, sp
+     a14:	e1a03006 	mov	r3, r6
+     a18:	e5b300b0 	ldr	r0, [r3, #176]!	; 0xb0
+     a1c:	e5931004 	ldr	r1, [r3, #4]
+     a20:	e5932008 	ldr	r2, [r3, #8]
+     a24:	e593300c 	ldr	r3, [r3, #12]
+     a28:	e8ac000f 	stmia	r12!, {r0, r1, r2, r3}
+      Cipher((state_t*)buffer,ctx->RoundKey);
+     a2c:	e1a0000d 	mov	r0, sp
+     a30:	e1a01006 	mov	r1, r6
+     a34:	ebfffeaf 	bl	4f8 <Cipher>
+
+      /* Increment Iv and handle overflow */
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+      {
+	/* inc will overflow */
+        if (ctx->Iv[bi] == 255)
+     a38:	e5d630bf 	ldrb	r3, [r6, #191]	; 0xbf
+     a3c:	e35300ff 	cmp	r3, #255	; 0xff
+      
+      memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+      Cipher((state_t*)buffer,ctx->RoundKey);
+
+      /* Increment Iv and handle overflow */
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+     a40:	11a02008 	movne	r2, r8
+      {
+	/* inc will overflow */
+        if (ctx->Iv[bi] == 255)
+     a44:	1a00000a 	bne	a74 <AES_CTR_xcrypt_buffer+0x98>
+     a48:	ea000017 	b	aac <AES_CTR_xcrypt_buffer+0xd0>
+     a4c:	e5d130be 	ldrb	r3, [r1, #190]	; 0xbe
+     a50:	e35300ff 	cmp	r3, #255	; 0xff
+     a54:	1a000006 	bne	a74 <AES_CTR_xcrypt_buffer+0x98>
+	{
+          ctx->Iv[bi] = 0;
+     a58:	e5c170be 	strb	r7, [r1, #190]	; 0xbe
+      
+      memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+      Cipher((state_t*)buffer,ctx->RoundKey);
+
+      /* Increment Iv and handle overflow */
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+     a5c:	e2422001 	sub	r2, r2, #1
+     a60:	e2411001 	sub	r1, r1, #1
+     a64:	e3720001 	cmn	r2, #1
+     a68:	1afffff7 	bne	a4c <AES_CTR_xcrypt_buffer+0x70>
+          continue;
+        } 
+        ctx->Iv[bi] += 1;
+        break;   
+      }
+      bi = 0;
+     a6c:	e1a03007 	mov	r3, r7
+     a70:	ea000003 	b	a84 <AES_CTR_xcrypt_buffer+0xa8>
+        if (ctx->Iv[bi] == 255)
+	{
+          ctx->Iv[bi] = 0;
+          continue;
+        } 
+        ctx->Iv[bi] += 1;
+     a74:	e0862002 	add	r2, r6, r2
+     a78:	e2833001 	add	r3, r3, #1
+     a7c:	e5c230b0 	strb	r3, [r2, #176]	; 0xb0
+        break;   
+      }
+      bi = 0;
+     a80:	e1a03007 	mov	r3, r7
+    }
+
+    buf[i] = (buf[i] ^ buffer[bi]);
+     a84:	e5d41000 	ldrb	r1, [r4]
+     a88:	e28d0010 	add	r0, sp, #16
+     a8c:	e0802003 	add	r2, r0, r3
+     a90:	e5522010 	ldrb	r2, [r2, #-16]
+     a94:	e0212002 	eor	r2, r1, r2
+     a98:	e4c42001 	strb	r2, [r4], #1
+{
+  uint8_t buffer[AES_BLOCKLEN];
+  
+  unsigned i;
+  int bi;
+  for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
+     a9c:	e2833001 	add	r3, r3, #1
+     aa0:	e1540005 	cmp	r4, r5
+     aa4:	1affffd7 	bne	a08 <AES_CTR_xcrypt_buffer+0x2c>
+     aa8:	ea000003 	b	abc <AES_CTR_xcrypt_buffer+0xe0>
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+      {
+	/* inc will overflow */
+        if (ctx->Iv[bi] == 255)
+	{
+          ctx->Iv[bi] = 0;
+     aac:	e5c670bf 	strb	r7, [r6, #191]	; 0xbf
+     ab0:	e1a01006 	mov	r1, r6
+      
+      memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+      Cipher((state_t*)buffer,ctx->RoundKey);
+
+      /* Increment Iv and handle overflow */
+      for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+     ab4:	e1a0200a 	mov	r2, r10
+     ab8:	eaffffe3 	b	a4c <AES_CTR_xcrypt_buffer+0x70>
+      bi = 0;
+    }
+
+    buf[i] = (buf[i] ^ buffer[bi]);
+  }
+}
+     abc:	e28dd014 	add	sp, sp, #20
+     ac0:	e8bd85f0 	pop	{r4, r5, r6, r7, r8, r10, pc}
+
+00000ac4 <main>:
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     ac4:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+     ac8:	e24dd0fc 	sub	sp, sp, #252	; 0xfc
+		
+		
+		// using AES encryption and decryption
+		
+		// 128 bit key
+		uint8_t key[16] =        { (uint8_t) 0x2b, (uint8_t) 0x7e, (uint8_t) 0x15, (uint8_t) 0x16,
+     acc:	e3014424 	movw	r4, #5156	; 0x1424
+     ad0:	e3404000 	movt	r4, #0
+     ad4:	e28dc0e8 	add	r12, sp, #232	; 0xe8
+     ad8:	e1a0e004 	mov	lr, r4
+     adc:	e5be020c 	ldr	r0, [lr, #524]!	; 0x20c
+     ae0:	e59e1004 	ldr	r1, [lr, #4]
+     ae4:	e59e2008 	ldr	r2, [lr, #8]
+     ae8:	e59e300c 	ldr	r3, [lr, #12]
+     aec:	e8ac000f 	stmia	r12!, {r0, r1, r2, r3}
+								   (uint8_t) 0x28, (uint8_t) 0xae, (uint8_t) 0xd2, (uint8_t) 0xa6, 
+								   (uint8_t) 0xab, (uint8_t) 0xf7, (uint8_t) 0x15, (uint8_t) 0x88, 
+								   (uint8_t) 0x09, (uint8_t) 0xcf, (uint8_t) 0x4f, (uint8_t) 0x3c };
+								 
+		// placeholder for plaintext
+		uint8_t plaintext[16] =  { (uint8_t) 0x6b, (uint8_t) 0xc1, (uint8_t) 0xbe, (uint8_t) 0xe2, 
+     af0:	e28dc0d8 	add	r12, sp, #216	; 0xd8
+     af4:	e1a03004 	mov	r3, r4
+     af8:	e5b3021c 	ldr	r0, [r3, #540]!	; 0x21c
+     afc:	e5931004 	ldr	r1, [r3, #4]
+     b00:	e5932008 	ldr	r2, [r3, #8]
+     b04:	e593300c 	ldr	r3, [r3, #12]
+     b08:	e8ac000f 	stmia	r12!, {r0, r1, r2, r3}
+								   (uint8_t) 0xe9, (uint8_t) 0x3d, (uint8_t) 0x7e, (uint8_t) 0x11, 
+								   (uint8_t) 0x73, (uint8_t) 0x93, (uint8_t) 0x17, (uint8_t) 0x2a };
+								   
+		// init AES with key
+		struct AES_ctx ctx;
+		AES_init_ctx(&ctx, key);
+     b0c:	e28d0018 	add	r0, sp, #24
+     b10:	e28d10e8 	add	r1, sp, #232	; 0xe8
+     b14:	ebffff4a 	bl	844 <AES_init_ctx>
+		// ecb
+		//AES_ECB_encrypt(&ctx, plaintext);
+		//AES_ECB_decrypt(&ctx, plaintext);
+		
+		// cbc , note that 16 is the blockchain length, do not change
+		AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+     b18:	e28d0018 	add	r0, sp, #24
+     b1c:	e28d10d8 	add	r1, sp, #216	; 0xd8
+     b20:	e3a02010 	mov	r2, #16
+     b24:	ebffff6d 	bl	8e0 <AES_CBC_encrypt_buffer>
+		AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+     b28:	e28d0018 	add	r0, sp, #24
+     b2c:	e28d10d8 	add	r1, sp, #216	; 0xd8
+     b30:	e3a02010 	mov	r2, #16
+     b34:	ebffff88 	bl	95c <AES_CBC_decrypt_buffer>
+		int offset;
+		int x;
+		int y;
+		int isEncrypted = 0;
+		
+		char *text_ptr = "Unencrypted Image       ";
+     b38:	e301b650 	movw	r11, #5712	; 0x1650
+     b3c:	e340b000 	movt	r11, #0
+		
+		
+		int offset;
+		int x;
+		int y;
+		int isEncrypted = 0;
+     b40:	e3a0c000 	mov	r12, #0
+		char *text_ptr = "Unencrypted Image       ";
+		
+		while (1) {
+			
+			if (*(Switch_ptr) & 0b00000001) {	
+				text_ptr = "Unencrypted Video      ";			
+     b44:	e3010680 	movw	r0, #5760	; 0x1680
+     b48:	e3400000 	movt	r0, #0
+     b4c:	e58d0004 	str	r0, [sp, #4]
+				*(Video_In_DMA_ptr + 3)	= 0x4;						// Enable the video
+			}else{
+				if(isEncrypted == 0){
+					text_ptr = "Unencrypted Image";
+     b50:	e301366c 	movw	r3, #5740	; 0x166c
+     b54:	e3403000 	movt	r3, #0
+     b58:	e58d3008 	str	r3, [sp, #8]
+			}		
+			
+			
+			if (*(KEY_ptr) == 0b1000) {
+				// Encrypt ECB
+				text_ptr = "ECB Encrypted        ";
+     b5c:	e3010698 	movw	r0, #5784	; 0x1698
+     b60:	e3400000 	movt	r0, #0
+     b64:	e58d000c 	str	r0, [sp, #12]
+				isEncrypted = 0;
+			}
+				
+			if (*(KEY_ptr) == 0b0010) {
+				// Encrypt CBC
+				text_ptr = "CBC Encrypted       ";
+     b68:	e30136b0 	movw	r3, #5808	; 0x16b0
+     b6c:	e3403000 	movt	r3, #0
+     b70:	e58d3010 	str	r3, [sp, #16]
+			
+			
+			int cordx = 10;
+			int cordy = 10;
+			offset = (cordy<<7)+cordx;
+			if (*(Switch_ptr) & 0b00001000) {
+     b74:	e300050a 	movw	r0, #1290	; 0x50a
+     b78:	e34c0900 	movt	r0, #51456	; 0xc900
+     b7c:	e58d0014 	str	r0, [sp, #20]
+		
+		char *text_ptr = "Unencrypted Image       ";
+		
+		while (1) {
+			
+			if (*(Switch_ptr) & 0b00000001) {	
+     b80:	e3a03000 	mov	r3, #0
+     b84:	e34f3f20 	movt	r3, #65312	; 0xff20
+     b88:	e5933040 	ldr	r3, [r3, #64]	; 0x40
+     b8c:	e3130001 	tst	r3, #1
+     b90:	0a000005 	beq	bac <main+0xe8>
+				text_ptr = "Unencrypted Video      ";			
+				*(Video_In_DMA_ptr + 3)	= 0x4;						// Enable the video
+     b94:	e3033fff 	movw	r3, #16383	; 0x3fff
+     b98:	e34f3f20 	movt	r3, #65312	; 0xff20
+     b9c:	e3a02004 	mov	r2, #4
+     ba0:	e5032f93 	str	r2, [r3, #-3987]	; 0xfffff06d
+		char *text_ptr = "Unencrypted Image       ";
+		
+		while (1) {
+			
+			if (*(Switch_ptr) & 0b00000001) {	
+				text_ptr = "Unencrypted Video      ";			
+     ba4:	e59db004 	ldr	r11, [sp, #4]
+     ba8:	ea000015 	b	c04 <main+0x140>
+				*(Video_In_DMA_ptr + 3)	= 0x4;						// Enable the video
+			}else{
+				if(isEncrypted == 0){
+					text_ptr = "Unencrypted Image";
+     bac:	e59d3008 	ldr	r3, [sp, #8]
+     bb0:	e35c0000 	cmp	r12, #0
+     bb4:	01a0b003 	moveq	r11, r3
+				}
+				*(Video_In_DMA_ptr + 3)	= 0x0; // freezes
+     bb8:	e3033fff 	movw	r3, #16383	; 0x3fff
+     bbc:	e34f3f20 	movt	r3, #65312	; 0xff20
+     bc0:	e3a00000 	mov	r0, #0
+     bc4:	e5030f93 	str	r0, [r3, #-3987]	; 0xfffff06d
+     bc8:	ea000006 	b	be8 <main+0x124>
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+						short temp2 = *(Video_Mem_ptr + (y << 9 ) + x);
+     bcc:	e1d320b0 	ldrh	r2, [r3]
+						*(Video_Mem_ptr + (y << 9) + x) = temp2;
+     bd0:	e0c320b2 	strh	r2, [r3], #2
+				if(isEncrypted == 0){
+					text_ptr = "Unencrypted Image";
+				}
+				*(Video_In_DMA_ptr + 3)	= 0x0; // freezes
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+     bd4:	e1530001 	cmp	r3, r1
+     bd8:	1afffffb 	bne	bcc <main+0x108>
+			}else{
+				if(isEncrypted == 0){
+					text_ptr = "Unencrypted Image";
+				}
+				*(Video_In_DMA_ptr + 3)	= 0x0; // freezes
+				for (y = 0; y < 240; y++) {
+     bdc:	e2800001 	add	r0, r0, #1
+     be0:	e35000f0 	cmp	r0, #240	; 0xf0
+     be4:	0a000006 	beq	c04 <main+0x140>
+					for (x = 0; x < 320; x++) {
+						short temp2 = *(Video_Mem_ptr + (y << 9 ) + x);
+     be8:	e1a01480 	lsl	r1, r0, #9
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     bec:	e1a03500 	lsl	r3, r0, #10
+     bf0:	e2833332 	add	r3, r3, #-939524096	; 0xc8000000
+     bf4:	e2811319 	add	r1, r1, #1677721600	; 0x64000000
+     bf8:	e2811d05 	add	r1, r1, #320	; 0x140
+     bfc:	e1a01081 	lsl	r1, r1, #1
+     c00:	eafffff1 	b	bcc <main+0x108>
+					}
+				}
+			}		
+			
+			
+			if (*(KEY_ptr) == 0b1000) {
+     c04:	e3a03000 	mov	r3, #0
+     c08:	e34f3f20 	movt	r3, #65312	; 0xff20
+     c0c:	e5933050 	ldr	r3, [r3, #80]	; 0x50
+     c10:	e3530008 	cmp	r3, #8
+     c14:	1a000031 	bne	ce0 <main+0x21c>
+     c18:	ea000025 	b	cb4 <main+0x1f0>
+				// Encrypt ECB
+				text_ptr = "ECB Encrypted        ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+     c1c:	e1d510b0 	ldrh	r1, [r5]
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+     c20:	e28d00f8 	add	r0, sp, #248	; 0xf8
+     c24:	e0802003 	add	r2, r0, r3
+     c28:	e7e70451 	ubfx	r0, r1, #8, #8
+     c2c:	e5420020 	strb	r0, [r2, #-32]	; 0xffffffe0
+						plaintext[i+1] = currPixel & 0x00ff;
+     c30:	e542101f 	strb	r1, [r2, #-31]	; 0xffffffe1
+						i=i+2;
+     c34:	e2833002 	add	r3, r3, #2
+						if(i>15){
+     c38:	e353000f 	cmp	r3, #15
+     c3c:	da000014 	ble	c94 <main+0x1d0>
+							i=0;
+							AES_ECB_encrypt(&ctx, plaintext);
+     c40:	e28d0018 	add	r0, sp, #24
+     c44:	e1a01006 	mov	r1, r6
+     c48:	ebffff18 	bl	8b0 <AES_ECB_encrypt>
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     c4c:	e2442007 	sub	r2, r4, #7
+						if(i>15){
+							i=0;
+							AES_ECB_encrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     c50:	e1520004 	cmp	r2, r4
+     c54:	ca00000d 	bgt	c90 <main+0x1cc>
+     c58:	e1a03006 	mov	r3, r6
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     c5c:	e088c005 	add	r12, r8, r5
+     c60:	e28cc332 	add	r12, r12, #-939524096	; 0xc8000000
+     c64:	e24cc00e 	sub	r12, r12, #14
+							AES_ECB_encrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+								
+								short returnPixel= (plaintext[j]<<8) | plaintext[j+1];
+     c68:	e5d30000 	ldrb	r0, [r3]
+     c6c:	e5d31001 	ldrb	r1, [r3, #1]
+     c70:	e1811400 	orr	r1, r1, r0, lsl #8
+								*(Video_Mem_ptr + (y << 9) + k) = returnPixel;
+     c74:	e18c10b3 	strh	r1, [r12, r3]
+						if(i>15){
+							i=0;
+							AES_ECB_encrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     c78:	e2822001 	add	r2, r2, #1
+     c7c:	e2833002 	add	r3, r3, #2
+     c80:	e1520004 	cmp	r2, r4
+     c84:	dafffff7 	ble	c68 <main+0x1a4>
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+     c88:	e1a03007 	mov	r3, r7
+     c8c:	ea000000 	b	c94 <main+0x1d0>
+     c90:	e1a03007 	mov	r3, r7
+			if (*(KEY_ptr) == 0b1000) {
+				// Encrypt ECB
+				text_ptr = "ECB Encrypted        ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+     c94:	e2844001 	add	r4, r4, #1
+     c98:	e2855002 	add	r5, r5, #2
+     c9c:	e3540d05 	cmp	r4, #320	; 0x140
+     ca0:	1affffdd 	bne	c1c <main+0x158>
+			
+			if (*(KEY_ptr) == 0b1000) {
+				// Encrypt ECB
+				text_ptr = "ECB Encrypted        ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+     ca4:	e28aa001 	add	r10, r10, #1
+     ca8:	e35a00f0 	cmp	r10, #240	; 0xf0
+     cac:	1a000005 	bne	cc8 <main+0x204>
+     cb0:	ea000008 	b	cd8 <main+0x214>
+					}
+				}
+			}		
+			
+			
+			if (*(KEY_ptr) == 0b1000) {
+     cb4:	e3a0a000 	mov	r10, #0
+     cb8:	e1a0300a 	mov	r3, r10
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     cbc:	e1a0700a 	mov	r7, r10
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+							AES_ECB_encrypt(&ctx, plaintext);
+     cc0:	e28d60d8 	add	r6, sp, #216	; 0xd8
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     cc4:	e266830e 	rsb	r8, r6, #939524096	; 0x38000000
+     cc8:	e1a0550a 	lsl	r5, r10, #10
+     ccc:	e2855332 	add	r5, r5, #-939524096	; 0xc8000000
+     cd0:	e1a04007 	mov	r4, r7
+     cd4:	eaffffd0 	b	c1c <main+0x158>
+			}		
+			
+			
+			if (*(KEY_ptr) == 0b1000) {
+				// Encrypt ECB
+				text_ptr = "ECB Encrypted        ";
+     cd8:	e59db00c 	ldr	r11, [sp, #12]
+								j=j+2;						
+							}
+						}
+					}
+				}
+			isEncrypted = 1;
+     cdc:	e3a0c001 	mov	r12, #1
+				
+			}
+			
+			if (*(KEY_ptr) == 0b0100) {
+     ce0:	e3a03000 	mov	r3, #0
+     ce4:	e34f3f20 	movt	r3, #65312	; 0xff20
+     ce8:	e5933050 	ldr	r3, [r3, #80]	; 0x50
+     cec:	e3530004 	cmp	r3, #4
+     cf0:	1a000030 	bne	db8 <main+0x2f4>
+     cf4:	ea000025 	b	d90 <main+0x2cc>
+				// Decrypt ECB
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+     cf8:	e1d510b0 	ldrh	r1, [r5]
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+     cfc:	e28d00f8 	add	r0, sp, #248	; 0xf8
+     d00:	e0802003 	add	r2, r0, r3
+     d04:	e7e70451 	ubfx	r0, r1, #8, #8
+     d08:	e5420020 	strb	r0, [r2, #-32]	; 0xffffffe0
+						plaintext[i+1] = currPixel & 0x00ff;
+     d0c:	e542101f 	strb	r1, [r2, #-31]	; 0xffffffe1
+						i=i+2;
+     d10:	e2833002 	add	r3, r3, #2
+						if(i>15){
+     d14:	e353000f 	cmp	r3, #15
+     d18:	da000014 	ble	d70 <main+0x2ac>
+							i=0;
+							AES_ECB_decrypt(&ctx, plaintext);
+     d1c:	e28d0018 	add	r0, sp, #24
+     d20:	e1a01006 	mov	r1, r6
+     d24:	ebfffee7 	bl	8c8 <AES_ECB_decrypt>
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     d28:	e2442007 	sub	r2, r4, #7
+						if(i>15){
+							i=0;
+							AES_ECB_decrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     d2c:	e1520004 	cmp	r2, r4
+     d30:	ca00000d 	bgt	d6c <main+0x2a8>
+     d34:	e1a03006 	mov	r3, r6
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     d38:	e088c005 	add	r12, r8, r5
+     d3c:	e28cc332 	add	r12, r12, #-939524096	; 0xc8000000
+     d40:	e24cc00e 	sub	r12, r12, #14
+							AES_ECB_decrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+								
+								short returnPixel= (plaintext[j]<<8) | plaintext[j+1];
+     d44:	e5d30000 	ldrb	r0, [r3]
+     d48:	e5d31001 	ldrb	r1, [r3, #1]
+     d4c:	e1811400 	orr	r1, r1, r0, lsl #8
+								*(Video_Mem_ptr + (y << 9) + k) = returnPixel;
+     d50:	e18c10b3 	strh	r1, [r12, r3]
+						if(i>15){
+							i=0;
+							AES_ECB_decrypt(&ctx, plaintext);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     d54:	e2822001 	add	r2, r2, #1
+     d58:	e2833002 	add	r3, r3, #2
+     d5c:	e1520004 	cmp	r2, r4
+     d60:	dafffff7 	ble	d44 <main+0x280>
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+     d64:	e1a03007 	mov	r3, r7
+     d68:	ea000000 	b	d70 <main+0x2ac>
+     d6c:	e1a03007 	mov	r3, r7
+			
+			if (*(KEY_ptr) == 0b0100) {
+				// Decrypt ECB
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+     d70:	e2844001 	add	r4, r4, #1
+     d74:	e2855002 	add	r5, r5, #2
+     d78:	e3540d05 	cmp	r4, #320	; 0x140
+     d7c:	1affffdd 	bne	cf8 <main+0x234>
+			}
+			
+			if (*(KEY_ptr) == 0b0100) {
+				// Decrypt ECB
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+     d80:	e28aa001 	add	r10, r10, #1
+     d84:	e35a00f0 	cmp	r10, #240	; 0xf0
+     d88:	1a000005 	bne	da4 <main+0x2e0>
+     d8c:	ea000008 	b	db4 <main+0x2f0>
+				}
+			isEncrypted = 1;
+				
+			}
+			
+			if (*(KEY_ptr) == 0b0100) {
+     d90:	e3a0a000 	mov	r10, #0
+     d94:	e1a0300a 	mov	r3, r10
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     d98:	e1a0700a 	mov	r7, r10
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+							AES_ECB_decrypt(&ctx, plaintext);
+     d9c:	e28d60d8 	add	r6, sp, #216	; 0xd8
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     da0:	e266830e 	rsb	r8, r6, #939524096	; 0x38000000
+     da4:	e1a0550a 	lsl	r5, r10, #10
+     da8:	e2855332 	add	r5, r5, #-939524096	; 0xc8000000
+     dac:	e1a04007 	mov	r4, r7
+     db0:	eaffffd0 	b	cf8 <main+0x234>
+								j=j+2;						
+							}
+						}
+					}
+				}
+				isEncrypted = 0;
+     db4:	e3a0c000 	mov	r12, #0
+			}
+				
+			if (*(KEY_ptr) == 0b0010) {
+     db8:	e3a03000 	mov	r3, #0
+     dbc:	e34f3f20 	movt	r3, #65312	; 0xff20
+     dc0:	e5933050 	ldr	r3, [r3, #80]	; 0x50
+     dc4:	e3530002 	cmp	r3, #2
+     dc8:	1a000033 	bne	e9c <main+0x3d8>
+     dcc:	ea000026 	b	e6c <main+0x3a8>
+				// Encrypt CBC
+				text_ptr = "CBC Encrypted       ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+     dd0:	e1d510b0 	ldrh	r1, [r5]
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+     dd4:	e28d00f8 	add	r0, sp, #248	; 0xf8
+     dd8:	e0802003 	add	r2, r0, r3
+     ddc:	e7e70451 	ubfx	r0, r1, #8, #8
+     de0:	e5420020 	strb	r0, [r2, #-32]	; 0xffffffe0
+						plaintext[i+1] = currPixel & 0x00ff;
+     de4:	e542101f 	strb	r1, [r2, #-31]	; 0xffffffe1
+						i=i+2;
+     de8:	e2833002 	add	r3, r3, #2
+						if(i>15){
+     dec:	e353000f 	cmp	r3, #15
+     df0:	da000015 	ble	e4c <main+0x388>
+							i=0;
+							AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+     df4:	e28d0018 	add	r0, sp, #24
+     df8:	e1a01006 	mov	r1, r6
+     dfc:	e1a02008 	mov	r2, r8
+     e00:	ebfffeb6 	bl	8e0 <AES_CBC_encrypt_buffer>
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     e04:	e2442007 	sub	r2, r4, #7
+						if(i>15){
+							i=0;
+							AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     e08:	e1520004 	cmp	r2, r4
+     e0c:	ca00000d 	bgt	e48 <main+0x384>
+     e10:	e1a03006 	mov	r3, r6
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     e14:	e08ac005 	add	r12, r10, r5
+     e18:	e28cc332 	add	r12, r12, #-939524096	; 0xc8000000
+     e1c:	e24cc00e 	sub	r12, r12, #14
+							AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+								
+								short returnPixel= (plaintext[j]<<8) | plaintext[j+1];
+     e20:	e5d30000 	ldrb	r0, [r3]
+     e24:	e5d31001 	ldrb	r1, [r3, #1]
+     e28:	e1811400 	orr	r1, r1, r0, lsl #8
+								*(Video_Mem_ptr + (y << 9) + k) = returnPixel;
+     e2c:	e18c10b3 	strh	r1, [r12, r3]
+						if(i>15){
+							i=0;
+							AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     e30:	e2822001 	add	r2, r2, #1
+     e34:	e2833002 	add	r3, r3, #2
+     e38:	e1520004 	cmp	r2, r4
+     e3c:	dafffff7 	ble	e20 <main+0x35c>
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+     e40:	e1a03007 	mov	r3, r7
+     e44:	ea000000 	b	e4c <main+0x388>
+     e48:	e1a03007 	mov	r3, r7
+			if (*(KEY_ptr) == 0b0010) {
+				// Encrypt CBC
+				text_ptr = "CBC Encrypted       ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+     e4c:	e2844001 	add	r4, r4, #1
+     e50:	e2855002 	add	r5, r5, #2
+     e54:	e3540d05 	cmp	r4, #320	; 0x140
+     e58:	1affffdc 	bne	dd0 <main+0x30c>
+				
+			if (*(KEY_ptr) == 0b0010) {
+				// Encrypt CBC
+				text_ptr = "CBC Encrypted       ";
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+     e5c:	e2899001 	add	r9, r9, #1
+     e60:	e35900f0 	cmp	r9, #240	; 0xf0
+     e64:	1a000006 	bne	e84 <main+0x3c0>
+     e68:	ea000009 	b	e94 <main+0x3d0>
+					}
+				}
+				isEncrypted = 0;
+			}
+				
+			if (*(KEY_ptr) == 0b0010) {
+     e6c:	e3a09000 	mov	r9, #0
+     e70:	e1a03009 	mov	r3, r9
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     e74:	e1a07009 	mov	r7, r9
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+							AES_CBC_encrypt_buffer(&ctx, plaintext,16);
+     e78:	e28d60d8 	add	r6, sp, #216	; 0xd8
+     e7c:	e3a08010 	mov	r8, #16
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     e80:	e266a30e 	rsb	r10, r6, #939524096	; 0x38000000
+     e84:	e1a05509 	lsl	r5, r9, #10
+     e88:	e2855332 	add	r5, r5, #-939524096	; 0xc8000000
+     e8c:	e1a04007 	mov	r4, r7
+     e90:	eaffffce 	b	dd0 <main+0x30c>
+				isEncrypted = 0;
+			}
+				
+			if (*(KEY_ptr) == 0b0010) {
+				// Encrypt CBC
+				text_ptr = "CBC Encrypted       ";
+     e94:	e59db010 	ldr	r11, [sp, #16]
+								j=j+2;						
+							}
+						}
+					}
+				}
+				isEncrypted = 1;
+     e98:	e3a0c001 	mov	r12, #1
+			}
+			
+			if (*(KEY_ptr) == 0b0001) {
+     e9c:	e3a03000 	mov	r3, #0
+     ea0:	e34f3f20 	movt	r3, #65312	; 0xff20
+     ea4:	e5933050 	ldr	r3, [r3, #80]	; 0x50
+     ea8:	e3530001 	cmp	r3, #1
+     eac:	1a000032 	bne	f7c <main+0x4b8>
+     eb0:	ea000026 	b	f50 <main+0x48c>
+				// Decrypt CBC
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+     eb4:	e1d510b0 	ldrh	r1, [r5]
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+     eb8:	e28d00f8 	add	r0, sp, #248	; 0xf8
+     ebc:	e0802003 	add	r2, r0, r3
+     ec0:	e7e70451 	ubfx	r0, r1, #8, #8
+     ec4:	e5420020 	strb	r0, [r2, #-32]	; 0xffffffe0
+						plaintext[i+1] = currPixel & 0x00ff;
+     ec8:	e542101f 	strb	r1, [r2, #-31]	; 0xffffffe1
+						i=i+2;
+     ecc:	e2833002 	add	r3, r3, #2
+						if(i>15){
+     ed0:	e353000f 	cmp	r3, #15
+     ed4:	da000015 	ble	f30 <main+0x46c>
+							i=0;
+							AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+     ed8:	e28d0018 	add	r0, sp, #24
+     edc:	e1a01006 	mov	r1, r6
+     ee0:	e1a02008 	mov	r2, r8
+     ee4:	ebfffe9c 	bl	95c <AES_CBC_decrypt_buffer>
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     ee8:	e2442007 	sub	r2, r4, #7
+						if(i>15){
+							i=0;
+							AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     eec:	e1520004 	cmp	r2, r4
+     ef0:	ca00000d 	bgt	f2c <main+0x468>
+     ef4:	e1a03006 	mov	r3, r6
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     ef8:	e08ac005 	add	r12, r10, r5
+     efc:	e28cc332 	add	r12, r12, #-939524096	; 0xc8000000
+     f00:	e24cc00e 	sub	r12, r12, #14
+							AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+								
+								short returnPixel= (plaintext[j]<<8) | plaintext[j+1];
+     f04:	e5d30000 	ldrb	r0, [r3]
+     f08:	e5d31001 	ldrb	r1, [r3, #1]
+     f0c:	e1811400 	orr	r1, r1, r0, lsl #8
+								*(Video_Mem_ptr + (y << 9) + k) = returnPixel;
+     f10:	e18c10b3 	strh	r1, [r12, r3]
+						if(i>15){
+							i=0;
+							AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+							int j = 0;
+							int k;
+							for (k=(x-7); k<=x; k++) {
+     f14:	e2822001 	add	r2, r2, #1
+     f18:	e2833002 	add	r3, r3, #2
+     f1c:	e1520004 	cmp	r2, r4
+     f20:	dafffff7 	ble	f04 <main+0x440>
+						short currPixel = *(Video_Mem_ptr + (y << 9 ) + x);
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+     f24:	e1a03007 	mov	r3, r7
+     f28:	ea000000 	b	f30 <main+0x46c>
+     f2c:	e1a03007 	mov	r3, r7
+			
+			if (*(KEY_ptr) == 0b0001) {
+				// Decrypt CBC
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+					for (x = 0; x < 320; x++) {
+     f30:	e2844001 	add	r4, r4, #1
+     f34:	e2855002 	add	r5, r5, #2
+     f38:	e3540d05 	cmp	r4, #320	; 0x140
+     f3c:	1affffdc 	bne	eb4 <main+0x3f0>
+			}
+			
+			if (*(KEY_ptr) == 0b0001) {
+				// Decrypt CBC
+				int i = 0;
+				for (y = 0; y < 240; y++) {
+     f40:	e2899001 	add	r9, r9, #1
+     f44:	e35900f0 	cmp	r9, #240	; 0xf0
+     f48:	1a000006 	bne	f68 <main+0x4a4>
+     f4c:	ea000009 	b	f78 <main+0x4b4>
+					}
+				}
+				isEncrypted = 1;
+			}
+			
+			if (*(KEY_ptr) == 0b0001) {
+     f50:	e3a09000 	mov	r9, #0
+     f54:	e1a03009 	mov	r3, r9
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     f58:	e1a07009 	mov	r7, r9
+						plaintext[i] = (currPixel & 0xff00) >> 8;
+						plaintext[i+1] = currPixel & 0x00ff;
+						i=i+2;
+						if(i>15){
+							i=0;
+							AES_CBC_decrypt_buffer(&ctx, plaintext,16);
+     f5c:	e28d60d8 	add	r6, sp, #216	; 0xd8
+     f60:	e3a08010 	mov	r8, #16
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     f64:	e266a30e 	rsb	r10, r6, #939524096	; 0x38000000
+     f68:	e1a05509 	lsl	r5, r9, #10
+     f6c:	e2855332 	add	r5, r5, #-939524096	; 0xc8000000
+     f70:	e1a04007 	mov	r4, r7
+     f74:	eaffffce 	b	eb4 <main+0x3f0>
+								j=j+2;						
+							}
+						}
+					}
+				}
+				isEncrypted = 0;
+     f78:	e3a0c000 	mov	r12, #0
+			
+			
+			int cordx = 10;
+			int cordy = 10;
+			offset = (cordy<<7)+cordx;
+			if (*(Switch_ptr) & 0b00001000) {
+     f7c:	e3a03000 	mov	r3, #0
+     f80:	e34f3f20 	movt	r3, #65312	; 0xff20
+     f84:	e5933040 	ldr	r3, [r3, #64]	; 0x40
+     f88:	e3130008 	tst	r3, #8
+     f8c:	0a00000c 	beq	fc4 <main+0x500>
+				while (*(text_ptr)) {
+     f90:	e5db1000 	ldrb	r1, [r11]
+     f94:	e3510000 	cmp	r1, #0
+     f98:	0afffef8 	beq	b80 <main+0xbc>
+*/
+/* Note: Set the switches SW1 and SW2 to high and rest of the switches to low for correct exposure timing while compiling and the loading the program in the Altera Monitor program.
+*/
+
+
+int main(void) {
+     f9c:	e28b2001 	add	r2, r11, #1
+     fa0:	e3003509 	movw	r3, #1289	; 0x509
+     fa4:	e34c3900 	movt	r3, #51456	; 0xc900
+     fa8:	e06b3003 	rsb	r3, r11, r3
+			int cordx = 10;
+			int cordy = 10;
+			offset = (cordy<<7)+cordx;
+			if (*(Switch_ptr) & 0b00001000) {
+				while (*(text_ptr)) {
+					*(Char_ptr + offset) = *(text_ptr); // write to the character buffer
+     fac:	e7c31002 	strb	r1, [r3, r2]
+					++text_ptr;
+     fb0:	e1a0b002 	mov	r11, r2
+			
+			int cordx = 10;
+			int cordy = 10;
+			offset = (cordy<<7)+cordx;
+			if (*(Switch_ptr) & 0b00001000) {
+				while (*(text_ptr)) {
+     fb4:	e4d21001 	ldrb	r1, [r2], #1
+     fb8:	e3510000 	cmp	r1, #0
+     fbc:	1afffffa 	bne	fac <main+0x4e8>
+     fc0:	eafffeee 	b	b80 <main+0xbc>
+     fc4:	e59f201c 	ldr	r2, [pc, #28]	; fe8 <main+0x524>
+			
+			
+			int cordx = 10;
+			int cordy = 10;
+			offset = (cordy<<7)+cordx;
+			if (*(Switch_ptr) & 0b00001000) {
+     fc8:	e59d1014 	ldr	r1, [sp, #20]
+					++text_ptr;
+					++offset;
+				}	
+			}else{
+				text_ptr = "                           ";
+				while (*(text_ptr)) {
+     fcc:	e3a03020 	mov	r3, #32
+					*(Char_ptr + offset) = *(text_ptr); // write to the character buffer
+     fd0:	e4c13001 	strb	r3, [r1], #1
+					++text_ptr;
+     fd4:	e1a0b002 	mov	r11, r2
+					++text_ptr;
+					++offset;
+				}	
+			}else{
+				text_ptr = "                           ";
+				while (*(text_ptr)) {
+     fd8:	e4d23001 	ldrb	r3, [r2], #1
+     fdc:	e3530000 	cmp	r3, #0
+     fe0:	1afffffa 	bne	fd0 <main+0x50c>
+     fe4:	eafffee5 	b	b80 <main+0xbc>
+     fe8:	000016c9 	.word	0x000016c9
+
+00000fec <atexit>:
+     fec:	e1a01000 	mov	r1, r0
+     ff0:	e3a00000 	mov	r0, #0
+     ff4:	e92d4008 	push	{r3, lr}
+     ff8:	e1a02000 	mov	r2, r0
+     ffc:	e1a03000 	mov	r3, r0
+    1000:	eb00000e 	bl	1040 <__register_exitproc>
+    1004:	e8bd4008 	pop	{r3, lr}
+    1008:	e12fff1e 	bx	lr
+
+0000100c <exit>:
+    100c:	e92d4008 	push	{r3, lr}
+    1010:	e3a01000 	mov	r1, #0
+    1014:	e1a04000 	mov	r4, r0
+    1018:	eb000045 	bl	1134 <__call_exitprocs>
+    101c:	e59f3018 	ldr	r3, [pc, #24]	; 103c <exit+0x30>
+    1020:	e5930000 	ldr	r0, [r3]
+    1024:	e590303c 	ldr	r3, [r0, #60]	; 0x3c
+    1028:	e3530000 	cmp	r3, #0
+    102c:	11a0e00f 	movne	lr, pc
+    1030:	112fff13 	bxne	r3
+    1034:	e1a00004 	mov	r0, r4
+    1038:	eb0000c9 	bl	1364 <_exit>
+    103c:	000016e4 	.word	0x000016e4
+
+00001040 <__register_exitproc>:
+    1040:	e59fc0e4 	ldr	r12, [pc, #228]	; 112c <__register_exitproc+0xec>
+    1044:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+    1048:	e59c4000 	ldr	r4, [r12]
+    104c:	e594c148 	ldr	r12, [r4, #328]	; 0x148
+    1050:	e35c0000 	cmp	r12, #0
+    1054:	0284cf53 	addeq	r12, r4, #332	; 0x14c
+    1058:	e59c5004 	ldr	r5, [r12, #4]
+    105c:	0584c148 	streq	r12, [r4, #328]	; 0x148
+    1060:	e355001f 	cmp	r5, #31
+    1064:	e24dd010 	sub	sp, sp, #16
+    1068:	e1a06000 	mov	r6, r0
+    106c:	da000015 	ble	10c8 <__register_exitproc+0x88>
+    1070:	e59f00b8 	ldr	r0, [pc, #184]	; 1130 <__register_exitproc+0xf0>
+    1074:	e3500000 	cmp	r0, #0
+    1078:	1a000001 	bne	1084 <__register_exitproc+0x44>
+    107c:	e3e00000 	mvn	r0, #0
+    1080:	ea000018 	b	10e8 <__register_exitproc+0xa8>
+    1084:	e3a00e19 	mov	r0, #400	; 0x190
+    1088:	e58d100c 	str	r1, [sp, #12]
+    108c:	e58d2008 	str	r2, [sp, #8]
+    1090:	e58d3004 	str	r3, [sp, #4]
+    1094:	e320f000 	nop	{0}
+    1098:	e250c000 	subs	r12, r0, #0
+    109c:	e59d100c 	ldr	r1, [sp, #12]
+    10a0:	e59d2008 	ldr	r2, [sp, #8]
+    10a4:	e59d3004 	ldr	r3, [sp, #4]
+    10a8:	0afffff3 	beq	107c <__register_exitproc+0x3c>
+    10ac:	e5945148 	ldr	r5, [r4, #328]	; 0x148
+    10b0:	e3a00000 	mov	r0, #0
+    10b4:	e58c0004 	str	r0, [r12, #4]
+    10b8:	e58c5000 	str	r5, [r12]
+    10bc:	e584c148 	str	r12, [r4, #328]	; 0x148
+    10c0:	e58c0188 	str	r0, [r12, #392]	; 0x188
+    10c4:	e58c018c 	str	r0, [r12, #396]	; 0x18c
+    10c8:	e3560000 	cmp	r6, #0
+    10cc:	e59c4004 	ldr	r4, [r12, #4]
+    10d0:	1a000007 	bne	10f4 <__register_exitproc+0xb4>
+    10d4:	e2843002 	add	r3, r4, #2
+    10d8:	e2844001 	add	r4, r4, #1
+    10dc:	e78c1103 	str	r1, [r12, r3, lsl #2]
+    10e0:	e58c4004 	str	r4, [r12, #4]
+    10e4:	e3a00000 	mov	r0, #0
+    10e8:	e28dd010 	add	sp, sp, #16
+    10ec:	e8bd41f0 	pop	{r4, r5, r6, r7, r8, lr}
+    10f0:	e12fff1e 	bx	lr
+    10f4:	e3a00001 	mov	r0, #1
+    10f8:	e1a00410 	lsl	r0, r0, r4
+    10fc:	e08c8104 	add	r8, r12, r4, lsl #2
+    1100:	e3560002 	cmp	r6, #2
+    1104:	e59c7188 	ldr	r7, [r12, #392]	; 0x188
+    1108:	e5883108 	str	r3, [r8, #264]	; 0x108
+    110c:	059c318c 	ldreq	r3, [r12, #396]	; 0x18c
+    1110:	e1877000 	orr	r7, r7, r0
+    1114:	01830000 	orreq	r0, r3, r0
+    1118:	e1a05008 	mov	r5, r8
+    111c:	e5882088 	str	r2, [r8, #136]	; 0x88
+    1120:	e58c7188 	str	r7, [r12, #392]	; 0x188
+    1124:	058c018c 	streq	r0, [r12, #396]	; 0x18c
+    1128:	eaffffe9 	b	10d4 <__register_exitproc+0x94>
+    112c:	000016e4 	.word	0x000016e4
+    1130:	00000000 	.word	0x00000000
+
+00001134 <__call_exitprocs>:
+    1134:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    1138:	e59f3168 	ldr	r3, [pc, #360]	; 12a8 <__call_exitprocs+0x174>
+    113c:	e5933000 	ldr	r3, [r3]
+    1140:	e24dd014 	sub	sp, sp, #20
+    1144:	e58d3004 	str	r3, [sp, #4]
+    1148:	e2833f52 	add	r3, r3, #328	; 0x148
+    114c:	e58d0008 	str	r0, [sp, #8]
+    1150:	e58d300c 	str	r3, [sp, #12]
+    1154:	e1a07001 	mov	r7, r1
+    1158:	e3a08001 	mov	r8, #1
+    115c:	e59d3004 	ldr	r3, [sp, #4]
+    1160:	e5936148 	ldr	r6, [r3, #328]	; 0x148
+    1164:	e3560000 	cmp	r6, #0
+    1168:	e59db00c 	ldr	r11, [sp, #12]
+    116c:	0a000033 	beq	1240 <__call_exitprocs+0x10c>
+    1170:	e5965004 	ldr	r5, [r6, #4]
+    1174:	e2554001 	subs	r4, r5, #1
+    1178:	5286a088 	addpl	r10, r6, #136	; 0x88
+    117c:	5285501f 	addpl	r5, r5, #31
+    1180:	508a5105 	addpl	r5, r10, r5, lsl #2
+    1184:	5a000007 	bpl	11a8 <__call_exitprocs+0x74>
+    1188:	ea000029 	b	1234 <__call_exitprocs+0x100>
+    118c:	e5953000 	ldr	r3, [r5]
+    1190:	e1530007 	cmp	r3, r7
+    1194:	0a000005 	beq	11b0 <__call_exitprocs+0x7c>
+    1198:	e2444001 	sub	r4, r4, #1
+    119c:	e3740001 	cmn	r4, #1
+    11a0:	e2455004 	sub	r5, r5, #4
+    11a4:	0a000022 	beq	1234 <__call_exitprocs+0x100>
+    11a8:	e3570000 	cmp	r7, #0
+    11ac:	1afffff6 	bne	118c <__call_exitprocs+0x58>
+    11b0:	e5963004 	ldr	r3, [r6, #4]
+    11b4:	e06a2005 	rsb	r2, r10, r5
+    11b8:	e2433001 	sub	r3, r3, #1
+    11bc:	e0862002 	add	r2, r6, r2
+    11c0:	e1530004 	cmp	r3, r4
+    11c4:	e5123078 	ldr	r3, [r2, #-120]	; 0xffffff88
+    11c8:	13a01000 	movne	r1, #0
+    11cc:	05864004 	streq	r4, [r6, #4]
+    11d0:	15021078 	strne	r1, [r2, #-120]	; 0xffffff88
+    11d4:	e3530000 	cmp	r3, #0
+    11d8:	0affffee 	beq	1198 <__call_exitprocs+0x64>
+    11dc:	e1a02418 	lsl	r2, r8, r4
+    11e0:	e5961188 	ldr	r1, [r6, #392]	; 0x188
+    11e4:	e1120001 	tst	r2, r1
+    11e8:	e5969004 	ldr	r9, [r6, #4]
+    11ec:	0a000016 	beq	124c <__call_exitprocs+0x118>
+    11f0:	e596118c 	ldr	r1, [r6, #396]	; 0x18c
+    11f4:	e1120001 	tst	r2, r1
+    11f8:	1a000016 	bne	1258 <__call_exitprocs+0x124>
+    11fc:	e59d0008 	ldr	r0, [sp, #8]
+    1200:	e5151080 	ldr	r1, [r5, #-128]	; 0xffffff80
+    1204:	e1a0e00f 	mov	lr, pc
+    1208:	e12fff13 	bx	r3
+    120c:	e5963004 	ldr	r3, [r6, #4]
+    1210:	e1530009 	cmp	r3, r9
+    1214:	1affffd0 	bne	115c <__call_exitprocs+0x28>
+    1218:	e59b3000 	ldr	r3, [r11]
+    121c:	e1530006 	cmp	r3, r6
+    1220:	1affffcd 	bne	115c <__call_exitprocs+0x28>
+    1224:	e2444001 	sub	r4, r4, #1
+    1228:	e3740001 	cmn	r4, #1
+    122c:	e2455004 	sub	r5, r5, #4
+    1230:	1affffdc 	bne	11a8 <__call_exitprocs+0x74>
+    1234:	e59f1070 	ldr	r1, [pc, #112]	; 12ac <__call_exitprocs+0x178>
+    1238:	e3510000 	cmp	r1, #0
+    123c:	1a000009 	bne	1268 <__call_exitprocs+0x134>
+    1240:	e28dd014 	add	sp, sp, #20
+    1244:	e8bd4ff0 	pop	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    1248:	e12fff1e 	bx	lr
+    124c:	e1a0e00f 	mov	lr, pc
+    1250:	e12fff13 	bx	r3
+    1254:	eaffffec 	b	120c <__call_exitprocs+0xd8>
+    1258:	e5150080 	ldr	r0, [r5, #-128]	; 0xffffff80
+    125c:	e1a0e00f 	mov	lr, pc
+    1260:	e12fff13 	bx	r3
+    1264:	eaffffe8 	b	120c <__call_exitprocs+0xd8>
+    1268:	e5963004 	ldr	r3, [r6, #4]
+    126c:	e3530000 	cmp	r3, #0
+    1270:	e5963000 	ldr	r3, [r6]
+    1274:	1a000008 	bne	129c <__call_exitprocs+0x168>
+    1278:	e3530000 	cmp	r3, #0
+    127c:	0a000006 	beq	129c <__call_exitprocs+0x168>
+    1280:	e1a00006 	mov	r0, r6
+    1284:	e58b3000 	str	r3, [r11]
+    1288:	e320f000 	nop	{0}
+    128c:	e59b6000 	ldr	r6, [r11]
+    1290:	e3560000 	cmp	r6, #0
+    1294:	1affffb5 	bne	1170 <__call_exitprocs+0x3c>
+    1298:	eaffffe8 	b	1240 <__call_exitprocs+0x10c>
+    129c:	e1a0b006 	mov	r11, r6
+    12a0:	e1a06003 	mov	r6, r3
+    12a4:	eafffff9 	b	1290 <__call_exitprocs+0x15c>
+    12a8:	000016e4 	.word	0x000016e4
+    12ac:	00000000 	.word	0x00000000
+
+000012b0 <register_fini>:
+    12b0:	e92d4008 	push	{r3, lr}
+    12b4:	e59f3010 	ldr	r3, [pc, #16]	; 12cc <register_fini+0x1c>
+    12b8:	e3530000 	cmp	r3, #0
+    12bc:	159f000c 	ldrne	r0, [pc, #12]	; 12d0 <register_fini+0x20>
+    12c0:	1bffff49 	blne	fec <atexit>
+    12c4:	e8bd4008 	pop	{r3, lr}
+    12c8:	e12fff1e 	bx	lr
+    12cc:	0000170c 	.word	0x0000170c
+    12d0:	000012d4 	.word	0x000012d4
+
+000012d4 <__libc_fini_array>:
+    12d4:	e92d4038 	push	{r3, r4, r5, lr}
+    12d8:	e59f5030 	ldr	r5, [pc, #48]	; 1310 <__libc_fini_array+0x3c>
+    12dc:	e59f4030 	ldr	r4, [pc, #48]	; 1314 <__libc_fini_array+0x40>
+    12e0:	e0654004 	rsb	r4, r5, r4
+    12e4:	e1b04144 	asrs	r4, r4, #2
+    12e8:	10855104 	addne	r5, r5, r4, lsl #2
+    12ec:	0a000004 	beq	1304 <__libc_fini_array+0x30>
+    12f0:	e5353004 	ldr	r3, [r5, #-4]!
+    12f4:	e1a0e00f 	mov	lr, pc
+    12f8:	e12fff13 	bx	r3
+    12fc:	e2544001 	subs	r4, r4, #1
+    1300:	1afffffa 	bne	12f0 <__libc_fini_array+0x1c>
+    1304:	eb000100 	bl	170c <__libc_fini>
+    1308:	e8bd4038 	pop	{r3, r4, r5, lr}
+    130c:	e12fff1e 	bx	lr
+    1310:	00001724 	.word	0x00001724
+    1314:	00001728 	.word	0x00001728
+
+00001318 <__cs3_premain>:
+    1318:	e92d4008 	push	{r3, lr}
+    131c:	eb00001d 	bl	1398 <__libc_init_array>
+    1320:	e59f3030 	ldr	r3, [pc, #48]	; 1358 <__cs3_premain+0x40>
+    1324:	e3530000 	cmp	r3, #0
+    1328:	15930000 	ldrne	r0, [r3]
+    132c:	01a00003 	moveq	r0, r3
+    1330:	e59f3024 	ldr	r3, [pc, #36]	; 135c <__cs3_premain+0x44>
+    1334:	e3530000 	cmp	r3, #0
+    1338:	15931000 	ldrne	r1, [r3]
+    133c:	01a01003 	moveq	r1, r3
+    1340:	e3a02000 	mov	r2, #0
+    1344:	ebfffdde 	bl	ac4 <main>
+    1348:	e59f3010 	ldr	r3, [pc, #16]	; 1360 <__cs3_premain+0x48>
+    134c:	e3530000 	cmp	r3, #0
+    1350:	1bffff2d 	blne	100c <exit>
+    1354:	eafffffe 	b	1354 <__cs3_premain+0x3c>
+	...
+    1360:	0000100c 	.word	0x0000100c
+
+00001364 <_exit>:
+    1364:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    1368:	e3a00018 	mov	r0, #24
+    136c:	e59f1004 	ldr	r1, [pc, #4]	; 1378 <_exit+0x14>
+    1370:	ef123456 	svc	0x00123456
+    1374:	eafffffe 	b	1374 <_exit+0x10>
+    1378:	00020026 	.word	0x00020026
+
+0000137c <__cs3_isr_interrupt>:
+    137c:	eafffffe 	b	137c <__cs3_isr_interrupt>
+
+00001380 <__cs3_isr_undef>:
+    1380:	eafffffe 	b	1380 <__cs3_isr_undef>
+
+00001384 <__cs3_isr_swi>:
+    1384:	eafffffe 	b	1384 <__cs3_isr_swi>
+
+00001388 <__cs3_isr_pabort>:
+    1388:	eafffffe 	b	1388 <__cs3_isr_pabort>
+
+0000138c <__cs3_isr_dabort>:
+    138c:	eafffffe 	b	138c <__cs3_isr_dabort>
+
+00001390 <__cs3_isr_irq>:
+    1390:	eafffffe 	b	1390 <__cs3_isr_irq>
+
+00001394 <__cs3_isr_fiq>:
+    1394:	eafffffe 	b	1394 <__cs3_isr_fiq>
+
+00001398 <__libc_init_array>:
+    1398:	e92d4070 	push	{r4, r5, r6, lr}
+    139c:	e59f506c 	ldr	r5, [pc, #108]	; 1410 <__libc_init_array+0x78>
+    13a0:	e59f606c 	ldr	r6, [pc, #108]	; 1414 <__libc_init_array+0x7c>
+    13a4:	e0656006 	rsb	r6, r5, r6
+    13a8:	e1b06146 	asrs	r6, r6, #2
+    13ac:	12455004 	subne	r5, r5, #4
+    13b0:	13a04000 	movne	r4, #0
+    13b4:	0a000005 	beq	13d0 <__libc_init_array+0x38>
+    13b8:	e5b53004 	ldr	r3, [r5, #4]!
+    13bc:	e2844001 	add	r4, r4, #1
+    13c0:	e1a0e00f 	mov	lr, pc
+    13c4:	e12fff13 	bx	r3
+    13c8:	e1560004 	cmp	r6, r4
+    13cc:	1afffff9 	bne	13b8 <__libc_init_array+0x20>
+    13d0:	e59f5040 	ldr	r5, [pc, #64]	; 1418 <__libc_init_array+0x80>
+    13d4:	e59f6040 	ldr	r6, [pc, #64]	; 141c <__libc_init_array+0x84>
+    13d8:	e0656006 	rsb	r6, r5, r6
+    13dc:	eb0000c2 	bl	16ec <_init>
+    13e0:	e1b06146 	asrs	r6, r6, #2
+    13e4:	12455004 	subne	r5, r5, #4
+    13e8:	13a04000 	movne	r4, #0
+    13ec:	0a000005 	beq	1408 <__libc_init_array+0x70>
+    13f0:	e5b53004 	ldr	r3, [r5, #4]!
+    13f4:	e2844001 	add	r4, r4, #1
+    13f8:	e1a0e00f 	mov	lr, pc
+    13fc:	e12fff13 	bx	r3
+    1400:	e1560004 	cmp	r6, r4
+    1404:	1afffff9 	bne	13f0 <__libc_init_array+0x58>
+    1408:	e8bd4070 	pop	{r4, r5, r6, lr}
+    140c:	e12fff1e 	bx	lr
+    1410:	00001704 	.word	0x00001704
+    1414:	00001704 	.word	0x00001704
+    1418:	00001704 	.word	0x00001704
+    141c:	0000170c 	.word	0x0000170c
+
+Disassembly of section .rodata:
+
+00001424 <sbox>:
+    1424:	7b777c63 c56f6bf2 2b670130 76abd7fe     c|w{.ko.0.g+...v
+    1434:	7dc982ca f04759fa afa2d4ad c072a49c     ...}.YG.......r.
+    1444:	2693fdb7 ccf73f36 f1e5a534 1531d871     ...&6?..4...q.1.
+    1454:	c323c704 9a059618 e2801207 75b227eb     ..#..........'.u
+    1464:	1a2c8309 a05a6e1b b3d63b52 842fe329     ..,..nZ.R;..)./.
+    1474:	ed00d153 5bb1fc20 39becb6a cf584c4a     S... ..[j..9JLX.
+    1484:	fbaaefd0 85334d43 7f02f945 a89f3c50     ....CM3.E...P<..
+    1494:	8f40a351 f5389d92 21dab6bc d2f3ff10     Q.@...8....!....
+    14a4:	ec130ccd 1744975f 3d7ea7c4 73195d64     ...._.D...~=d].s
+    14b4:	dc4f8160 88902a22 14b8ee46 db0b5ede     `.O."*..F....^..
+    14c4:	0a3a32e0 5c240649 62acd3c2 79e49591     .2:.I.$\...b...y
+    14d4:	6d37c8e7 a94ed58d eaf4566c 08ae7a65     ..7m..N.lV..ez..
+    14e4:	2e2578ba c6b4a61c 1f74dde8 8a8bbd4b     .x%.......t.K...
+    14f4:	66b53e70 0ef60348 b9573561 9e1dc186     p>.fH...a5W.....
+    1504:	1198f8e1 948ed969 e9871e9b df2855ce     ....i........U(.
+    1514:	0d89a18c 6842e6bf 0f2d9941 16bb54b0     ......BhA.-..T..
+
+00001524 <Rcon>:
+    1524:	0402018d 40201008 00361b80              ...... @..6.
+
+00001530 <rsbox>:
+    1530:	d56a0952 38a53630 9ea340bf fbd7f381     R.j.06.8.@......
+    1540:	8239e37c 87ff2f9b 44438e34 cbe9dec4     |.9../..4.CD....
+    1550:	32947b54 3d23c2a6 0b954cee 4ec3fa42     T{.2..#=.L..B..N
+    1560:	66a12e08 b224d928 49a25b76 25d18b6d     ...f(.$.v[.Im..%
+    1570:	64f6f872 16986886 cc5ca4d4 92b6655d     r..d.h....\.]e..
+    1580:	5048706c dab9edfd 5746155e 849d8da7     lpHP....^.FW....
+    1590:	00abd890 0ad3bc8c 0558e4f7 0645b3b8     ..........X...E.
+    15a0:	8f1e2cd0 020f3fca 03bdafc1 6b8a1301     .,...?.........k
+    15b0:	4111913a eadc674f cecff297 73e6b4f0     :..AOg.........s
+    15c0:	2274ac96 8535ade7 e837f9e2 6edf751c     ..t"..5...7..u.n
+    15d0:	711af147 89c5291d 0e62b76f 1bbe18aa     G..q.)..o.b.....
+    15e0:	4b3e56fc 2079d2c6 fec0db9a f45acd78     .V>K..y ....x.Z.
+    15f0:	33a8dd1f 31c70788 591012b1 5fec8027     ...3...1...Y'.._
+    1600:	a97f5160 0d4ab519 9f7ae52d ef9cc993     `Q....J.-.z.....
+    1610:	4d3be0a0 b0f52aae 3cbbebc8 61995383     ..;M.*.....<.S.a
+    1620:	7e042b17 26d677ba 631469e1 7d0c2155     .+.~.w.&.i.cU!.}
+    1630:	16157e2b a6d2ae28 8815f7ab 3c4fcf09     +~..(.........O<
+    1640:	e2bec16b 969f402e 117e3de9 2a179373     k....@...=~.s..*
+    1650:	6e656e55 70797263 20646574 67616d49     Unencrypted Imag
+    1660:	20202065 20202020 00000000 6e656e55     e       ....Unen
+    1670:	70797263 20646574 67616d49 00000065     crypted Image...
+    1680:	6e656e55 70797263 20646574 65646956     Unencrypted Vide
+    1690:	2020206f 00202020 20424345 72636e45     o      .ECB Encr
+    16a0:	65747079 20202064 20202020 00000020     ypted        ...
+    16b0:	20434243 72636e45 65747079 20202064     CBC Encrypted   
+    16c0:	20202020 00000000 20202020 20202020         ....        
+    16d0:	20202020 20202020 20202020 20202020                     
+    16e0:	00202020                                   .
+
+000016e4 <_global_impure_ptr>:
+    16e4:	00001750 00000043                       P...C...
+
+000016ec <_init>:
+    16ec:	e1a0c00d 	mov	r12, sp
+    16f0:	e92ddff8 	push	{r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, lr, pc}
+    16f4:	e24cb004 	sub	r11, r12, #4
+    16f8:	e24bd028 	sub	sp, r11, #40	; 0x28
+    16fc:	e89d6ff0 	ldm	sp, {r4, r5, r6, r7, r8, r9, r10, r11, sp, lr}
+    1700:	e12fff1e 	bx	lr
+
+00001704 <__init_array_start>:
+    1704:	000012b0 	.word	0x000012b0
+
+00001708 <__frame_dummy_init_array_entry>:
+    1708:	00000208                                ....
+
+0000170c <__libc_fini>:
+    170c:	e1a0c00d 	mov	r12, sp
+    1710:	e92ddff8 	push	{r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, lr, pc}
+    1714:	e24cb004 	sub	r11, r12, #4
+    1718:	e24bd028 	sub	sp, r11, #40	; 0x28
+    171c:	e89d6ff0 	ldm	sp, {r4, r5, r6, r7, r8, r9, r10, r11, sp, lr}
+    1720:	e12fff1e 	bx	lr
+
+00001724 <__fini_array_start>:
+    1724:	000001c4 	.word	0x000001c4
+
+00001728 <__cs3_regions>:
+	...
+    1734:	00001b80 	.word	0x00001b80
+    1738:	00000020 	.word	0x00000020
+
+0000173c <__cs3_regions_end>:
+    173c:	00000000 	.word	0x00000000
